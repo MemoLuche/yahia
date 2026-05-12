@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Elhadi Yahia Phytochemicals &amp; Nutrition Lab</title>
+  <meta name="description" content="Meet the team of the Phytochemicals and Nutrition Laboratory at UAQ, led by Dr. Elhadi M. Yahia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Page-specific additions */
+    .page-hero {
+      background: linear-gradient(135deg, var(--c-primary) 0%, #0d3320 100%);
+      padding: calc(var(--nav-h) + 56px) 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 60px;
+      background: var(--c-bg);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 80% 30%, rgba(82,183,136,.1) 0%, transparent 55%),
+        radial-gradient(circle at 20% 70%, rgba(224,122,95,.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; text-align: center; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: 12px; }
+    .page-hero p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 20px; font-size: .82rem; color: rgba(255,255,255,.55); }
+    .breadcrumb a { color: var(--c-primary-l); }
+    .breadcrumb span { color: rgba(255,255,255,.35); }
+
+    /* Team sections */
+    .team-section { padding: 64px 0; }
+    .team-section:nth-child(even) { background: var(--c-light); }
+    .team-section-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .team-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--c-border);
+    }
+    .team-section-title h2 { font-family: var(--font-head); font-size: 1.5rem; color: var(--c-dark); white-space: nowrap; }
+    .team-section-title .icon-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--c-primary);
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Leader card (featured) */
+    .leader-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      background: #fff;
+      border-radius: var(--r-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--c-border);
+      align-items: start;
+      margin-bottom: 32px;
+    }
+    .leader-img-wrap { text-align: center; }
+    .leader-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--c-light);
+      box-shadow: var(--shadow-md);
+      margin: 0 auto 16px;
+    }
+    .leader-img-fallback {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--c-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--c-primary-m);
+      margin: 0 auto 16px;
+      border: 5px solid var(--c-light);
+    }
+    .leader-role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--c-primary);
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: .76rem;
+      font-weight: 600;
+    }
+    .leader-name { font-family: var(--font-head); font-size: 1.6rem; color: var(--c-dark); margin-bottom: 4px; }
+    .leader-country { color: var(--c-muted); font-size: .9rem; margin-bottom: 16px; }
+    .leader-country i { color: var(--c-accent); }
+    .leader-divider { width: 40px; height: 3px; background: var(--c-accent); border-radius: 2px; margin: 16px 0; }
+    .leader-bio { font-size: .9rem; color: var(--c-text); line-height: 1.75; margin-bottom: 20px; }
+    .leader-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .leader-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border: 1.5px solid var(--c-border);
+      border-radius: 50px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--c-primary);
+      transition: all var(--transition);
+    }
+    .leader-link:hover { background: var(--c-primary); color: #fff; border-color: var(--c-primary); }
+    .leader-kpis { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+    .leader-kpi {
+      text-align: center;
+      padding: 14px 20px;
+      background: var(--c-light);
+      border-radius: var(--r-md);
+      min-width: 90px;
+    }
+    .leader-kpi .num { font-family: var(--font-head); font-size: 1.5rem; color: var(--c-primary); display: block; font-weight: 700; }
+    .leader-kpi .lbl { font-size: .72rem; color: var(--c-muted); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* Team member grid */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 28px;
+    }
+    .member-card {
+      background: #fff;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--c-border);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .member-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .member-card-top {
+      padding: 28px 24px 20px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .member-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid var(--c-light);
+    }
+    .member-photo-fallback {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--c-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--c-primary-m);
+      flex-shrink: 0;
+    }
+    .member-info { flex: 1; min-width: 0; }
+    .member-name { font-family: var(--font-head); font-size: 1.05rem; color: var(--c-dark); margin-bottom: 3px; line-height: 1.3; }
+    .member-country { font-size: .8rem; color: var(--c-muted); margin-bottom: 6px; }
+    .member-country i { color: var(--c-accent); }
+    .member-position {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--c-primary);
+      background: var(--c-light);
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+    .member-card-body { padding: 18px 24px 20px; }
+    .member-bio { font-size: .855rem; color: var(--c-muted); line-height: 1.65; }
+    .member-bio b { color: var(--c-text); font-weight: 600; }
+    .member-card-footer {
+      padding: 14px 24px;
+      background: var(--c-bg);
+      border-top: 1px solid var(--c-border);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .member-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .74rem;
+      font-weight: 600;
+      color: var(--c-primary-m);
+      background: rgba(45,106,79,.08);
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 1px solid rgba(45,106,79,.15);
+    }
+
+    /* Collapsible bio */
+    .bio-toggle { cursor: pointer; color: var(--c-primary); font-size: .8rem; font-weight: 600; margin-top: 8px; display: inline-flex; align-items: center; gap: 4px; }
+    .bio-full { display: none; margin-top: 8px; }
+    .bio-full.open { display: block; }
+
+    /* Contact strip */
+    #contact { background: var(--c-primary); }
+
+    @media (max-width: 700px) {
+      .leader-card { grid-template-columns: 1fr; }
+      .leader-img, .leader-img-fallback { width: 140px; height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png"
+           alt="Elhadi Yahia – Phytochemicals and Nutrition Laboratory" />
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li class="has-sub">
+        <a href="#">Publications</a>
+        <ul class="sub-menu">
+          <li><a href="../elhadiyahia.net/books.1.html">Books</a></li>
+          <li><a href="../elhadiyahia.net/book-chapters.1.html">Book Chapters</a></li>
+          <li><a href="../elhadiyahia.net/refereed-articles.1.html">Refereed Articles</a></li>
+          <li><a href="../elhadiyahia.net/technical-articles.1.html">Technical Articles</a></li>
+          <li><a href="../elhadiyahia.net/abstracs.1.html">Abstracts</a></li>
+        </ul>
+      </li>
+      <li><a href="../elhadiyahia.net/news/index.html">News</a></li>
+      <li><a href="../elhadiyahia.net/views/index.html">Views</a></li>
+      <li class="has-sub">
+        <a href="#">Gallery</a>
+        <ul class="sub-menu">
+          <li><a href="../elhadiyahia.net/our-laboratory/index.html">Our Laboratory</a></li>
+          <li><a href="../elhadiyahia.net/foods/index.html">Foods</a></li>
+          <li><a href="../elhadiyahia.net/queretaro/index.html">Querétaro</a></li>
+          <li><a href="../elhadiyahia.net/mexico/index.html">Mexico</a></li>
+          <li><a href="../elhadiyahia.net/people/index.html">People</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="../elhadiyahia.net/refereed-articles.1.html">Publications</a>
+  <a href="../elhadiyahia.net/news/index.html">News</a>
+  <a href="about.html#contact">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color: rgba(255,255,255,.8);">About Us</span>
+    </div>
+    <h1>About Us</h1>
+    <p>Meet the people behind the Phytochemicals &amp; Nutrition Laboratory at the Universidad Autónoma de Querétaro.</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- LABORATORY TEAM                                              -->
+<!-- ============================================================ -->
+<section class="team-section" style="background: var(--c-bg);">
+  <div class="container">
+    <div class="team-section-title">
+      <span class="icon-pill"><i class="fas fa-flask"></i> Laboratory Team</span>
+      <h2>Current Laboratory Team</h2>
+    </div>
+
+    <!-- Dr. Yahia – Leader -->
+    <div class="leader-card">
+      <div class="leader-img-wrap">
+        <img class="leader-img"
+             src="../elhadiyahia.net/wp-content/uploads/2024/06/Dr.-Elhadi-Yahia.-Foto-150x150.jpg"
+             alt="Dr. Elhadi M. Yahia"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="leader-img-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+        <div style="margin-top: 14px;">
+          <span class="leader-role-badge"><i class="fas fa-star"></i> Laboratory Leader</span>
+        </div>
+      </div>
+      <div>
+        <p class="leader-country"><i class="fas fa-map-marker-alt"></i> México</p>
+        <h2 class="leader-name">Elhadi M. Yahia, Ph.D.</h2>
+        <p style="color: var(--c-muted); font-size: .9rem; margin-bottom: 12px;">Emeritus Professor · Universidad Autónoma de Querétaro</p>
+        <div class="leader-divider"></div>
+        <div class="leader-kpis">
+          <div class="leader-kpi"><span class="num">25</span><span class="lbl">Books</span></div>
+          <div class="leader-kpi"><span class="num">400+</span><span class="lbl">Articles</span></div>
+          <div class="leader-kpi"><span class="num">30+</span><span class="lbl">Years</span></div>
+          <div class="leader-kpi"><span class="num">Top 2%</span><span class="lbl">World Scientists</span></div>
+        </div>
+        <p class="leader-bio">
+          Dr. Elhadi M. Yahia is Emeritus Professor and Senior Scientist at the University of Querétaro, Mexico,
+          where he teaches, conducts research, and supervises graduate students on food security, postharvest
+          technology, food science, and human nutrition. He is also Courtesy Professor at the University of Florida, USA.
+          He has published 25 books in 3 languages and more than 400 scientific and technical articles and book chapters.
+          He served as Agro Industry Officer at the FAO/UN, collaborating on the Global Initiative on Food Loss and
+          Waste Reduction. He has been classified among the top 2% of World Scientists by Stanford University.
+        </p>
+        <p class="leader-bio" style="margin-bottom: 20px;">
+          <strong>Education:</strong> B.Sc. – University of Tripoli, Libya &nbsp;·&nbsp;
+          M.Sc. – University of California, Davis &nbsp;·&nbsp;
+          Ph.D. – Cornell University, Ithaca, New York
+        </p>
+        <div class="leader-links">
+          <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank" class="leader-link">
+            <i class="fab fa-researchgate"></i> ResearchGate
+          </a>
+          <a href="https://scholar.google.com.mx/citations?user=BZgYhRAAAAAJ&hl=es" target="_blank" class="leader-link">
+            <i class="fas fa-graduation-cap"></i> Google Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank" class="leader-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:yahia@uaq.mx" class="leader-link">
+            <i class="fas fa-envelope"></i> yahia@uaq.mx
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other lab members -->
+    <div class="members-grid">
+
+      <!-- Dr. Francisco Lujan -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2026/04/Dr-Francisco-Lujan-Mendez-150x150.png"
+               alt="Dr. Francisco Lujan Méndez"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Dr. Francisco Lujan Méndez</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-microscope"></i> Researcher</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Education:</b> Ph.D. in Chemical-Biological Sciences (UAQ) · M.Sc. Human Nutrition (UAQ) · Clinical Nutritionist (UAA).<br><br>
+            Professor and researcher at the Faculty of Natural Sciences (UAQ). Research focuses on phytochemicals with antitumor and immunogenic activity, and biomarkers in colorectal cancer.
+            <span class="bio-toggle" onclick="toggleBio(this)">Read more <i class="fas fa-chevron-down"></i></span>
+            <span class="bio-full">
+              <br><b>Research Areas:</b> Identification of phytochemicals with antitumor/immunogenic activity · Study of a recombinant lectin as anticancer biopharmaceutical · Biomarkers in colorectal cancer via instrumental analysis.<br>
+              <b>Skills:</b> Bioactive compound extraction · Cell culture · Western blot · Flow cytometry · HPLC · Gas chromatography.
+            </span>
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-dna"></i> Phytochemicals</span>
+          <span class="member-chip"><i class="fas fa-ribbon"></i> Cancer</span>
+          <span class="member-chip"><i class="fas fa-heartbeat"></i> Nutrition</span>
+        </div>
+      </div>
+
+      <!-- Antonio Rocha González -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-08-at-10.37.40-AM-150x150.jpeg"
+               alt="Antonio Rocha González"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Antonio Rocha González</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-user-graduate"></i> Nutrition Student</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Education:</b> Nutrition student at the Universidad Autónoma de San Luis Potosí (UASLP).<br><br>
+            Interested in sports nutrition and scientific research. Currently contributing to the laboratory's research activities.
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-apple-alt"></i> Nutrition</span>
+          <span class="member-chip"><i class="fas fa-running"></i> Sports</span>
+        </div>
+      </div>
+
+    </div><!-- /members-grid -->
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- COLLABORATORS                                                -->
+<!-- ============================================================ -->
+<section class="team-section" style="background: #fff;">
+  <div class="container">
+    <div class="team-section-title">
+      <span class="icon-pill"><i class="fas fa-globe"></i> Network</span>
+      <h2>Current Collaborators</h2>
+    </div>
+
+    <div class="members-grid">
+
+      <!-- Dr. Armando Carrillo-López -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2025/06/Captura-de-pantalla-2025-06-02-140502.png"
+               alt="Dr. Armando Carrillo-López"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Dr. Armando Carrillo-López</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-flask"></i> SNI Level II</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Institution:</b> Universidad Autónoma de Sinaloa (UAS).<br>
+            <b>Education:</b> Doctorate in Plant Biotechnology (CINVESTAV-IPN) · M.Sc. Fruits &amp; Vegetables (CIAD) · B.Sc. Biochemical Food Engineering.<br><br>
+            61 scientific articles, 3 books, 8 book chapters. h-index 22, 1,975+ citations.
+            <span class="bio-toggle" onclick="toggleBio(this)">Read more <i class="fas fa-chevron-down"></i></span>
+            <span class="bio-full">
+              <br><b>Research:</b> Postharvest technology and physiology · Identification of phenolic compounds and carotenoids · Osmosonic dehydration. Co-editor with Dr. Yahia of <em>Postharvest Physiology and Biochemistry of Fruits and Vegetables</em> (Woodhead, 2019).
+            </span>
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-apple-alt"></i> Postharvest</span>
+          <span class="member-chip"><i class="fas fa-leaf"></i> Phytochemicals</span>
+        </div>
+      </div>
+
+      <!-- Dr. José de Jesús Ornelas-Paz -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2025/07/jjop.jpg"
+               alt="Dr. José de Jesús Ornelas-Paz"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Dr. José de Jesús Ornelas-Paz</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-flask"></i> SNI Level III</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Institution:</b> Research Center for Food and Development (CIAD), Chihuahua.<br>
+            <b>Education:</b> Doctorate – UAQ/CIAD · M.Sc. Food Science (UAQ) · B.Sc. Biochemical Engineering.<br><br>
+            Leader of "Natural Pigments" research group (23 researchers, 8 countries). 120+ peer-reviewed papers.
+            <span class="bio-toggle" onclick="toggleBio(this)">Read more <i class="fas fa-chevron-down"></i></span>
+            <span class="bio-full">
+              <br>Winner of the National Award in Food Science and Technology (2018). Associate editor for two scientific journals, reviewer for 47 journals.
+              <br><a href="https://www.ciad.mx/personal/jose-de-jesus-ornelas-paz/" target="_blank" style="color: var(--c-primary);">ciad.mx profile →</a>
+            </span>
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-palette"></i> Pigments</span>
+          <span class="member-chip"><i class="fas fa-dna"></i> Bioavailability</span>
+        </div>
+      </div>
+
+      <!-- Dr. Gustavo González Aguilar -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <div class="member-photo-fallback"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Dr. Gustavo González Aguilar</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-flask"></i> SNI Level III</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Institution:</b> Research Center for Food and Development (CIAD), Hermosillo, Sonora.<br>
+            <b>Education:</b> Postdoctoral – USDA, Beltsville MD · Doctorate (Valencia, Spain, 1995) · M.S. ICAS, Mexico · B.S. University of Sonora.<br><br>
+            Coordinator of Plant Foods Technologies area at CIAD.
+            <span class="bio-toggle" onclick="toggleBio(this)">Read more <i class="fas fa-chevron-down"></i></span>
+            <span class="bio-full">
+              <br><b>Research:</b> Fresh-cut vegetable technology · Antioxidants and antimicrobials for fruit quality · Characterization of bioactive compounds in tropical fruits · Shelf-life optimization.
+            </span>
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-apple-alt"></i> Fresh-cut</span>
+          <span class="member-chip"><i class="fas fa-shield-alt"></i> Antioxidants</span>
+        </div>
+      </div>
+
+      <!-- Dra. Maria Elena Maldonado Celis -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2025/06/Foto.Dra_.-Maria-Elena-Maldonado-Celis-1.jpg"
+               alt="Dra. Maria Elena Maldonado Celis"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Dra. Maria Elena Maldonado Celis</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> Colombia</div>
+            <span class="member-position"><i class="fas fa-chalkboard-teacher"></i> Full Professor</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Institution:</b> University of Antioquia, School of Nutrition and Dietetics.<br>
+            <b>Education:</b> Biologist · Biochemist · M.Sc. Basic Biomedical Sciences · Ph.D. Life and Health Sciences.<br><br>
+            Research on natural products for cancer chemoprevention; in vitro/in vivo models and clinical trials.
+            <span class="bio-toggle" onclick="toggleBio(this)">Read more <i class="fas fa-chevron-down"></i></span>
+            <span class="bio-full">
+              <br>Coordinator of Research Group on the Impact of Food Components on Health (UdeA). Former coordinator of PhD in Human Nutrition and Food (2021–2022).
+            </span>
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-ribbon"></i> Chemoprevention</span>
+          <span class="member-chip"><i class="fas fa-leaf"></i> Natural Products</span>
+        </div>
+      </div>
+
+      <!-- Ph.D. Claudia Inés Victoria Campos -->
+      <div class="member-card">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2025/06/Captura-de-pantalla-2025-06-02-145623.png"
+               alt="Ph.D. Claudia Inés Victoria Campos"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Ph.D. Claudia Inés Victoria Campos</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-chalkboard-teacher"></i> SNI Level I</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Institution:</b> Universidad Autónoma de San Luis Potosí (UASLP).<br>
+            <b>Education:</b> Ph.D. Food Science (CIAD, 2016) · M.S. Food Science (CIAD) · B.Sc. Human Nutrition (UAQ).<br><br>
+            Sabbatical leave at the Lab of Phytochemicals &amp; Nutrition (UAQ, 2024). Published in high-impact journals. Honorable Mention, National Food Science &amp; Tech Award 2017.
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-leaf"></i> Phytochemicals</span>
+          <span class="member-chip"><i class="fas fa-dna"></i> Bioavailability</span>
+        </div>
+      </div>
+
+      <!-- Guillermo A. Gordillo Pizarro -->
+      <div class="member-card" style="border-color: var(--c-primary-l); box-shadow: 0 0 0 2px rgba(82,183,136,.2);">
+        <div class="member-card-top">
+          <img class="member-photo"
+               src="../elhadiyahia.net/wp-content/uploads/2026/04/Guillermo-Gordillo.jpg"
+               alt="Guillermo A. Gordillo Pizarro"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="member-photo-fallback" style="display:none;"><i class="fas fa-user"></i></div>
+          <div class="member-info">
+            <div class="member-name">Guillermo A. Gordillo Pizarro</div>
+            <div class="member-country"><i class="fas fa-map-marker-alt"></i> México</div>
+            <span class="member-position"><i class="fas fa-code"></i> IT &amp; Web Dev</span>
+          </div>
+        </div>
+        <div class="member-card-body">
+          <p class="member-bio">
+            <b>Education:</b> Software Engineering student, Universidad Autónoma de Querétaro (UAQ).<br><br>
+            Serving as SNI Level III/Emeritus Researcher Assistant III, providing information technology support and web development for the laboratory website and digital resources.
+          </p>
+        </div>
+        <div class="member-card-footer">
+          <span class="member-chip"><i class="fas fa-code"></i> Web Dev</span>
+          <span class="member-chip"><i class="fas fa-server"></i> IT Support</span>
+          <span class="member-chip"><i class="fas fa-database"></i> Software Eng.</span>
+        </div>
+      </div>
+
+    </div><!-- /members-grid -->
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONTACT                                                      -->
+<!-- ============================================================ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="label" style="color: var(--c-primary-l);">Get in Touch</span>
+        <h2 class="section-title" style="color: #fff;">Contact the Laboratory</h2>
+        <p class="section-desc" style="color: rgba(255,255,255,.65);">
+          For research inquiries, collaboration proposals, or media requests,
+          please reach out to us.
+        </p>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:yahia@uaq.mx" style="color: var(--c-primary-l);">yahia@uaq.mx</a></span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-university"></i></div>
+            <div>
+              <strong>Institution</strong>
+              <span>Universidad Autónoma de Querétaro, Mexico</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Monday – Friday, 9:00 – 18:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://twitter.com/elhadiyahia2" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://scholar.google.com.mx/citations?user=BZgYhRAAAAAJ&hl=es" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" placeholder="your@email.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fsubject">Subject</label>
+          <input type="text" id="fsubject" placeholder="Research collaboration, inquiry…" />
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" placeholder="Write your message here…"></textarea>
+        </div>
+        <button class="form-submit" type="submit">
+          <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png" alt="Phytochemicals Lab" />
+        <p>Research and development on food, nutrition and health at the Universidad Autónoma de Querétaro, Mexico.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://twitter.com/elhadiyahia2" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank"><i class="fab fa-researchgate"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Publications</h4>
+        <div class="footer-links">
+          <a href="../elhadiyahia.net/books.1.html">Books</a>
+          <a href="../elhadiyahia.net/book-chapters.1.html">Book Chapters</a>
+          <a href="../elhadiyahia.net/refereed-articles.1.html">Refereed Articles</a>
+          <a href="../elhadiyahia.net/technical-articles.1.html">Technical Articles</a>
+          <a href="../elhadiyahia.net/abstracs.1.html">Abstracts</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="../elhadiyahia.net/news/index.html">News</a>
+          <a href="../elhadiyahia.net/gallery/index.html">Gallery</a>
+          <a href="../elhadiyahia.net/videos/index.html">Videos</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:yahia@uaq.mx" style="color:var(--c-footer-text)">yahia@uaq.mx</a></div>
+        <div class="footer-contact-item"><i class="fas fa-university"></i><span>Universidad Autónoma de Querétaro, Mexico</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Fri 9:00–18:00</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Elhadi Yahia – Phytochemicals &amp; Nutrition Laboratory, UAQ. All rights reserved.</span>
+      <span>Redesigned for academic excellence</span>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  navbar.classList.add('scrolled');
+  window.addEventListener('scroll', () => {
+    document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-nav').classList.toggle('open');
+  });
+  document.getElementById('scroll-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  function toggleBio(el) {
+    const full = el.nextElementSibling;
+    const isOpen = full.classList.toggle('open');
+    el.innerHTML = isOpen
+      ? 'Show less <i class="fas fa-chevron-up"></i>'
+      : 'Read more <i class="fas fa-chevron-down"></i>';
+  }
+</script>
+</body>
+</html>

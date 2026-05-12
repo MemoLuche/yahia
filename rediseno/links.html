@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Links of Interest – Elhadi Yahia Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .page-hero{background:linear-gradient(135deg,var(--c-primary) 0%,#0d3320 100%);padding:calc(var(--nav-h) + 56px) 0 64px;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:var(--c-bg);clip-path:ellipse(55% 100% at 50% 100%);}
+    .page-hero-bg{position:absolute;inset:0;background-image:radial-gradient(circle at 80% 30%,rgba(82,183,136,.1) 0%,transparent 55%);pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:1;text-align:center;}
+    .page-hero h1{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:12px;}
+    .page-hero p{color:rgba(255,255,255,.7);font-size:1.05rem;max-width:560px;margin:0 auto;}
+    .breadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:20px;font-size:.82rem;color:rgba(255,255,255,.55);}
+    .breadcrumb a{color:var(--c-primary-l);}.breadcrumb span{color:rgba(255,255,255,.35);}
+
+    /* Section tabs */
+    .tab-nav{background:#fff;border-bottom:2px solid var(--c-border);position:sticky;top:var(--nav-h);z-index:90;}
+    .tab-nav-inner{display:flex;overflow-x:auto;}
+    .tab-btn{display:flex;align-items:center;gap:8px;padding:16px 22px;font-size:.88rem;font-weight:600;color:var(--c-muted);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;}
+    .tab-btn:hover{color:var(--c-primary);}.tab-btn.active{color:var(--c-primary);border-bottom-color:var(--c-primary);}
+    .tab-panel{display:none;padding:56px 0;}.tab-panel.active{display:block;}
+
+    /* Link cards */
+    .links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+    .link-card{background:#fff;border:1px solid var(--c-border);border-radius:var(--r-lg);padding:24px;display:flex;gap:16px;align-items:flex-start;transition:transform .2s,box-shadow .2s,border-color .2s;text-decoration:none;color:inherit;}
+    .link-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--c-primary-l);}
+    .link-icon{width:48px;height:48px;border-radius:10px;background:var(--c-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--c-primary);flex-shrink:0;}
+    .link-card h3{font-family:var(--font-head);font-size:.95rem;color:var(--c-dark);margin-bottom:4px;line-height:1.35;}
+    .link-card p{font-size:.8rem;color:var(--c-muted);line-height:1.5;margin-bottom:8px;}
+    .link-url{font-size:.75rem;color:var(--c-primary-m);display:flex;align-items:center;gap:4px;font-weight:500;}
+
+    /* Video cards */
+    .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+    .video-card{background:#fff;border:1px solid var(--c-border);border-radius:var(--r-lg);overflow:hidden;transition:transform .2s,box-shadow .2s;}
+    .video-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .video-thumb{position:relative;aspect-ratio:16/9;background:var(--c-dark);display:flex;align-items:center;justify-content:center;cursor:pointer;}
+    .video-thumb img{width:100%;height:100%;object-fit:cover;opacity:.8;}
+    .video-thumb-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a4731,#0d2b1e);display:flex;align-items:center;justify-content:center;}
+    .play-btn{width:56px;height:56px;background:var(--c-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;position:absolute;box-shadow:0 4px 16px rgba(224,122,95,.5);transition:transform .2s;}
+    .video-thumb:hover .play-btn{transform:scale(1.1);}
+    .video-body{padding:18px;}
+    .video-body h3{font-family:var(--font-head);font-size:.95rem;color:var(--c-dark);margin-bottom:6px;line-height:1.4;}
+    .video-body p{font-size:.8rem;color:var(--c-muted);}
+    .video-meta{display:flex;align-items:center;gap:12px;margin-top:10px;font-size:.75rem;color:var(--c-muted);}
+
+    /* Books grid */
+    .interest-books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;}
+    .interest-book{background:#fff;border:1px solid var(--c-border);border-radius:var(--r-md);overflow:hidden;transition:transform .2s,box-shadow .2s;}
+    .interest-book:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .interest-book-cover{height:200px;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-m));display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;gap:8px;padding:16px;text-align:center;}
+    .interest-book-cover i{font-size:2rem;opacity:.7;}
+    .interest-book-cover span{font-size:.75rem;opacity:.6;text-transform:uppercase;letter-spacing:.06em;}
+    .interest-book-body{padding:14px;}
+    .interest-book-body h4{font-family:var(--font-head);font-size:.9rem;color:var(--c-dark);margin-bottom:4px;line-height:1.3;}
+    .interest-book-body p{font-size:.75rem;color:var(--c-muted);}
+
+    /* Journal list */
+    .journals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+    .journal-item{background:#fff;border:1px solid var(--c-border);border-radius:var(--r-md);padding:18px;display:flex;gap:14px;align-items:center;transition:border-color .2s,box-shadow .2s;}
+    .journal-item:hover{border-color:var(--c-primary-l);box-shadow:var(--shadow-sm);}
+    .journal-rank{width:36px;height:36px;background:var(--c-primary);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;}
+    .journal-item h4{font-size:.88rem;font-weight:600;color:var(--c-dark);margin-bottom:2px;}
+    .journal-item p{font-size:.75rem;color:var(--c-muted);}
+    .journal-if{display:inline-block;background:rgba(82,183,136,.1);color:var(--c-primary);font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:50px;margin-top:4px;}
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png" alt="Elhadi Yahia Lab"/></a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li class="has-sub"><a href="publications.html">Publications</a><ul class="sub-menu"><li><a href="publications.html#books">Books</a></li><li><a href="publications.html#articles">Refereed Articles</a></li></ul></li>
+      <li><a href="news.html">News</a></li><li><a href="views.html">Views</a></li>
+      <li class="has-sub"><a href="gallery.html">Gallery</a><ul class="sub-menu"><li><a href="gallery.html#lab">Our Laboratory</a></li><li><a href="gallery.html#foods">Foods</a></li></ul></li>
+      <li><a href="links.html" class="active">Links</a></li>
+      <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="mobile-nav"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="views.html">Views</a><a href="gallery.html">Gallery</a><a href="links.html">Links</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.8)">Links of Interest</span></div>
+    <h1>Links of Interest</h1>
+    <p>Curated resources — organizations, videos, books, and journals recommended by the laboratory.</p>
+  </div>
+</div>
+
+<div class="tab-nav">
+  <div class="container tab-nav-inner">
+    <button class="tab-btn active" data-tab="websites"><i class="fas fa-globe"></i> Web Sites</button>
+    <button class="tab-btn" data-tab="videos"><i class="fas fa-play-circle"></i> Videos</button>
+    <button class="tab-btn" data-tab="books"><i class="fas fa-book"></i> Books of Interest</button>
+    <button class="tab-btn" data-tab="journals"><i class="fas fa-journal-whills"></i> Journals of Interest</button>
+  </div>
+</div>
+
+<!-- WEB SITES -->
+<div class="tab-panel active" id="tab-websites">
+  <div class="container">
+    <div style="margin-bottom:32px;"><span class="label">Organizations &amp; Resources</span><h2 class="section-title">Recommended Web Sites</h2><p class="section-desc">Key organizations, databases, and platforms relevant to food science, nutrition, and postharvest research.</p></div>
+    <div style="margin-bottom:40px;"><span class="label" style="font-size:.72rem;">International Organizations</span></div>
+    <div class="links-grid" style="margin-bottom:40px;">
+      <a href="https://www.fao.org" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-globe-americas"></i></div>
+        <div><h3>FAO – Food and Agriculture Organization</h3><p>UN agency leading international efforts on hunger elimination, food security, nutrition, and sustainable agriculture.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> fao.org</span></div>
+      </a>
+      <a href="https://www.worldbank.org" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-landmark"></i></div>
+        <div><h3>World Bank – Agriculture</h3><p>Development initiatives addressing food systems, agricultural productivity, and rural poverty reduction globally.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> worldbank.org</span></div>
+      </a>
+      <a href="https://www.gcca.net" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-snowflake"></i></div>
+        <div><h3>Global Cold Chain Alliance</h3><p>Leading organization for temperature-controlled storage and distribution of perishable food products worldwide.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> gcca.net</span></div>
+      </a>
+      <a href="https://www.postharvest.com" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-apple-alt"></i></div>
+        <div><h3>Postcosecha.com – Noticias</h3><p>Spanish-language resource for postharvest technology news, research updates, and practical guides for producers.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> postcosecha.com</span></div>
+      </a>
+      <a href="https://www.ishs.org" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-seedling"></i></div>
+        <div><h3>ISHS – International Society for Horticultural Science</h3><p>Scientific organization dedicated to advancing horticultural science globally through symposia and publications.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> ishs.org</span></div>
+      </a>
+      <a href="https://www.uaq.mx" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-university"></i></div>
+        <div><h3>Universidad Autónoma de Querétaro</h3><p>Our home institution — UAQ's Faculty of Natural Sciences hosts the Phytochemicals &amp; Nutrition Laboratory.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> uaq.mx</span></div>
+      </a>
+      <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fab fa-researchgate"></i></div>
+        <div><h3>ResearchGate – Dr. Yahia's Profile</h3><p>Access Dr. Yahia's complete publication list, research data, and collaborate directly through ResearchGate.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> researchgate.net</span></div>
+      </a>
+      <a href="https://scholar.google.com.mx/citations?user=BZgYhRAAAAAJ&hl=es" target="_blank" class="link-card">
+        <div class="link-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div><h3>Google Scholar – Dr. Yahia</h3><p>Citation metrics, h-index, and full publication record on Google Scholar for Dr. Elhadi M. Yahia.</p><span class="link-url"><i class="fas fa-external-link-alt"></i> scholar.google.com</span></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEOS -->
+<div class="tab-panel" id="tab-videos">
+  <div class="container">
+    <div style="margin-bottom:32px;"><span class="label">Multimedia Resources</span><h2 class="section-title">Videos &amp; Lectures</h2><p class="section-desc">Recorded lectures, interviews, and presentations by Dr. Yahia and the lab team.</p></div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb"><div class="video-thumb-placeholder"></div><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Introduction to Phytochemicals in Fruits and Vegetables</h3><p>Overview lecture on the classification, health relevance, and research methods in phytochemical science.</p><div class="video-meta"><span><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</span><span><i class="fas fa-clock"></i> 45 min</span><span><i class="far fa-calendar"></i> 2023</span></div></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="video-thumb-placeholder"></div><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Food Loss and Waste: Global Challenges – FAO Webinar</h3><p>Dr. Yahia's presentation at the FAO global webinar series on reducing postharvest food losses.</p><div class="video-meta"><span><i class="fas fa-globe"></i> FAO Platform</span><span><i class="fas fa-clock"></i> 1h 20min</span><span><i class="far fa-calendar"></i> 2022</span></div></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="video-thumb-placeholder"></div><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Postharvest Technology for Smallholder Farmers</h3><p>Practical training video on simple, low-cost postharvest techniques for improving fruit and vegetable quality.</p><div class="video-meta"><span><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</span><span><i class="fas fa-clock"></i> 32 min</span><span><i class="far fa-calendar"></i> 2021</span></div></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><img src="../elhadiyahia.net/wp-content/uploads/2022/02/Picture121.png" alt="Lecture" style="opacity:.5"/><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Bioavailability of Phytochemicals: From Plant to Human Health</h3><p>Keynote lecture on the mechanisms of phytochemical absorption and their biological significance.</p><div class="video-meta"><span><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</span><span><i class="fas fa-clock"></i> 55 min</span><span><i class="far fa-calendar"></i> 2023</span></div></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="video-thumb-placeholder"></div><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Summer of Research 2024 – Lab Documentary</h3><p>A short documentary showcasing the summer research program experience at the Phytochemicals &amp; Nutrition Lab.</p><div class="video-meta"><span><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</span><span><i class="fas fa-clock"></i> 12 min</span><span><i class="far fa-calendar"></i> 2024</span></div></div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><div class="video-thumb-placeholder"></div><div class="play-btn"><i class="fas fa-play"></i></div></div>
+        <div class="video-body"><h3>Native Mexican Fruits: Nutritional Treasures</h3><p>Educational video on the exceptional phytochemical profiles of Mexico's native fruits and their health potential.</p><div class="video-meta"><span><i class="fab fa-youtube" style="color:#ff0000"></i> YouTube</span><span><i class="fas fa-clock"></i> 28 min</span><span><i class="far fa-calendar"></i> 2022</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKS OF INTEREST -->
+<div class="tab-panel" id="tab-books">
+  <div class="container">
+    <div style="margin-bottom:32px;"><span class="label">Recommended Reading</span><h2 class="section-title">Books of Interest</h2><p class="section-desc">Essential reading recommended by the laboratory for students and researchers in food science and nutrition.</p></div>
+    <div class="interest-books-grid">
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#1a4731,#2d6a4f)"><i class="fas fa-book"></i><span>Food Science</span></div><div class="interest-book-body"><h4>Fennema's Food Chemistry (5th Ed.)</h4><p>Damodaran, S. &amp; Parkin, K. (Eds.)<br/>CRC Press, 2017</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#c05f44,#e07a5f)"><i class="fas fa-book"></i><span>Phytochemicals</span></div><div class="interest-book-body"><h4>Handbook of Phytochemical Research</h4><p>Bernhoft, A. (Ed.)<br/>Norwegian Academy, 2018</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><i class="fas fa-book"></i><span>Nutrition</span></div><div class="interest-book-body"><h4>Present Knowledge in Nutrition (11th Ed.)</h4><p>Marriott, B. et al. (Eds.)<br/>Academic Press, 2020</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#d97706,#f59e0b)"><i class="fas fa-book"></i><span>Postharvest</span></div><div class="interest-book-body"><h4>Postharvest: An Introduction to the Physiology &amp; Handling of Fruit and Vegetables</h4><p>Wills, R. et al.<br/>UNSW Press, 2018</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#0f766e,#14b8a6)"><i class="fas fa-book"></i><span>Biochemistry</span></div><div class="interest-book-body"><h4>Biochemistry of Foods (3rd Ed.)</h4><p>Eskin, M. &amp; Shahidi, F. (Eds.)<br/>Academic Press, 2012</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#be185d,#ec4899)"><i class="fas fa-book"></i><span>Carotenoids</span></div><div class="interest-book-body"><h4>Carotenoids: Nutrition, Analysis and Technology</h4><p>Meléndez-Martínez, A.J. (Ed.)<br/>Wiley-Blackwell, 2016</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#065f46,#059669)"><i class="fas fa-book"></i><span>Antioxidants</span></div><div class="interest-book-body"><h4>Handbook of Antioxidants</h4><p>Cadenas, E. &amp; Packer, L. (Eds.)<br/>Marcel Dekker, 2019</p></div></div>
+      <div class="interest-book"><div class="interest-book-cover" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><i class="fas fa-book"></i><span>Polyphenols</span></div><div class="interest-book-body"><h4>Polyphenols in Human Health and Disease</h4><p>Watson, R. (Ed.)<br/>Academic Press, 2020</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- JOURNALS OF INTEREST -->
+<div class="tab-panel" id="tab-journals">
+  <div class="container">
+    <div style="margin-bottom:32px;"><span class="label">Peer-Reviewed Journals</span><h2 class="section-title">Journals of Interest</h2><p class="section-desc">High-impact journals in food science, postharvest biology, and nutrition recommended for researchers.</p></div>
+    <div class="journals-grid">
+      <a href="https://www.journals.elsevier.com/food-chemistry" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">1</div>
+        <div><h4>Food Chemistry</h4><p>Elsevier · Compositional analysis, additives, and technology</p><span class="journal-if">IF: 8.8</span></div>
+      </a>
+      <a href="https://pubs.acs.org/journal/jafcau" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">2</div>
+        <div><h4>Journal of Agricultural and Food Chemistry</h4><p>ACS Publications · Chemistry of agricultural products</p><span class="journal-if">IF: 6.1</span></div>
+      </a>
+      <a href="https://www.journals.elsevier.com/postharvest-biology-and-technology" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">3</div>
+        <div><h4>Postharvest Biology and Technology</h4><p>Elsevier · Leader in postharvest science</p><span class="journal-if">IF: 7.3</span></div>
+      </a>
+      <a href="https://www.mdpi.com/journal/nutrients" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">4</div>
+        <div><h4>Nutrients</h4><p>MDPI · Open access nutrition research</p><span class="journal-if">IF: 5.9</span></div>
+      </a>
+      <a href="https://www.sciencedirect.com/journal/food-and-chemical-toxicology" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">5</div>
+        <div><h4>Food and Chemical Toxicology</h4><p>Elsevier · Safety of food components and contaminants</p><span class="journal-if">IF: 6.0</span></div>
+      </a>
+      <a href="https://www.sciencedirect.com/journal/lwt" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">6</div>
+        <div><h4>LWT – Food Science and Technology</h4><p>Elsevier · Broad food science and technology</p><span class="journal-if">IF: 6.0</span></div>
+      </a>
+      <a href="https://www.sciencedirect.com/journal/food-research-international" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">7</div>
+        <div><h4>Food Research International</h4><p>Elsevier · Broad food science research</p><span class="journal-if">IF: 8.1</span></div>
+      </a>
+      <a href="https://www.mdpi.com/journal/foods" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">8</div>
+        <div><h4>Foods</h4><p>MDPI · Open access, broad food science</p><span class="journal-if">IF: 5.2</span></div>
+      </a>
+      <a href="https://www.sciencedirect.com/journal/journal-of-functional-foods" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">9</div>
+        <div><h4>Journal of Functional Foods</h4><p>Elsevier · Bioactive components and health benefits</p><span class="journal-if">IF: 6.2</span></div>
+      </a>
+      <a href="https://www.frontiersin.org/journals/nutrition" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">10</div>
+        <div><h4>Frontiers in Nutrition</h4><p>Frontiers · Open access nutrition &amp; dietetics</p><span class="journal-if">IF: 5.0</span></div>
+      </a>
+      <a href="https://www.sciencedirect.com/journal/food-chemistry-x" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">11</div>
+        <div><h4>Food Chemistry: X</h4><p>Elsevier · Open access companion to Food Chemistry</p><span class="journal-if">IF: 6.5</span></div>
+      </a>
+      <a href="https://www.springer.com/journal/12161" target="_blank" class="journal-item" style="text-decoration:none;color:inherit;">
+        <div class="journal-rank">12</div>
+        <div><h4>Food Analytical Methods</h4><p>Springer · Methods and applications in food analysis</p><span class="journal-if">IF: 3.1</span></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png" alt="Lab"/><p>Research and development on food, nutrition and health at UAQ, Mexico.</p><div class="footer-social"><a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="http://twitter.com/elhadiyahia2" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank"><i class="fab fa-researchgate"></i></a></div></div>
+      <div class="footer-col"><h4>Links</h4><div class="footer-links"><a href="links.html#websites">Web Sites</a><a href="links.html#videos">Videos</a><a href="links.html#books">Books of Interest</a><a href="links.html#journals">Journals of Interest</a></div></div>
+      <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="gallery.html">Gallery</a></div></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:yahia@uaq.mx" style="color:var(--c-footer-text)">yahia@uaq.mx</a></div><div class="footer-contact-item"><i class="fas fa-university"></i><span>Universidad Autónoma de Querétaro</span></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Elhadi Yahia – Phytochemicals &amp; Nutrition Laboratory, UAQ.</span><span>Redesigned for academic excellence</span></div>
+  </div>
+</footer>
+<button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+<script>
+  const navbar=document.getElementById('navbar');navbar.classList.add('scrolled');
+  window.addEventListener('scroll',()=>document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>400));
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobile-nav').classList.toggle('open'));
+  document.getElementById('scroll-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    });
+  });
+  const hash=location.hash.replace('#','');
+  const m={websites:'websites',videos:'videos',books:'books',journals:'journals'};
+  if(m[hash]) document.querySelector(`[data-tab="${m[hash]}"]`).click();
+</script>
+</body>
+</html>

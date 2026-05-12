@@ -1,0 +1,4 @@
+User-agent:*
+Disalow:/wp-admin/
+Sitemap:https://elhadiyahia.net/sitemap.xml
+Sitemap:https://elhadiyahia.net/?sitemap.xml
