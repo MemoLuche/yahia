@@ -1,0 +1,13 @@
+/*
+Theme Name: Elhadi Yahia
+Theme URI: https://elhadiyahia.net
+Author: Guillermo Gordillo
+Description: Tema clásico a medida para el sitio del Dr. Elhadi Yahia (Food Science & Postharvest Technology). Basado en el rediseño estático.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: elhadi
+*/
+
+/* Los estilos reales viven en assets/styles-v2.css y se encolan desde functions.php.
+   Este archivo solo necesita la cabecera de arriba para que WordPress reconozca el tema. */

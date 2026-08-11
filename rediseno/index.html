@@ -1,653 +1,747 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elhadi Yahia – Phytochemicals & Nutrition Laboratory</title>
-  <meta name="description" content="Dr. Elhadi M. Yahia – Emeritus Professor at University of Querétaro. Research and Development on Food, Nutrition and Phytochemicals." />
-
-  <!-- Fonts -->
+  <title>Elhadi Yahia – Food Science &amp; Postharvest Technology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-v2.css" />
 </head>
 <body>
 
-<!-- ============================================================ -->
-<!-- NAVBAR                                                       -->
-<!-- ============================================================ -->
+<!-- ================================================
+     NAVBAR
+     ================================================ -->
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
       <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png"
-           alt="Elhadi Yahia – Phytochemicals and Nutrition Laboratory" />
+           style="height:40px;width:auto;filter:brightness(10);"
+           onerror="this.src='../elhadiyahia.net/wp-content/uploads/2022/02/logo-negro.png'; this.style.filter='brightness(10)'; this.onerror=null;"
+           alt="Elhadi Yahia" />
     </a>
 
     <ul class="nav-menu">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="about.html">About</a></li>
       <li class="has-sub">
-        <a href="#">Publications</a>
+        <a href="publications.html">Publications</a>
         <ul class="sub-menu">
-          <li><a href="../elhadiyahia.net/books.1.html"><i class="fas fa-book fa-sm"></i> &nbsp;Books</a></li>
-          <li><a href="../elhadiyahia.net/book-chapters.1.html"><i class="fas fa-book-open fa-sm"></i> &nbsp;Book Chapters</a></li>
-          <li><a href="../elhadiyahia.net/refereed-articles.1.html"><i class="fas fa-bookmark fa-sm"></i> &nbsp;Refereed Articles</a></li>
-          <li><a href="../elhadiyahia.net/technical-articles.1.html"><i class="far fa-file-pdf fa-sm"></i> &nbsp;Technical Articles</a></li>
-          <li><a href="../elhadiyahia.net/abstracs.1.html"><i class="fas fa-file-signature fa-sm"></i> &nbsp;Abstracts</a></li>
+          <li><a href="publications.html#books"><i class="fa-solid fa-book fa-fw"></i> Books</a></li>
+          <li><a href="publications.html#chapters"><i class="fa-solid fa-bookmark fa-fw"></i> Book Chapters</a></li>
+          <li><a href="publications.html#articles"><i class="fa-solid fa-file-alt fa-fw"></i> Refereed Articles</a></li>
+          <li><a href="publications.html#technical"><i class="fa-solid fa-flask fa-fw"></i> Technical Articles</a></li>
+          <li><a href="publications.html#abstracts"><i class="fa-solid fa-align-left fa-fw"></i> Abstracts</a></li>
         </ul>
       </li>
-      <li><a href="../elhadiyahia.net/news/index.html">News</a></li>
-      <li><a href="../elhadiyahia.net/views/index.html">Views</a></li>
-      <li class="has-sub">
-        <a href="#">Gallery</a>
-        <ul class="sub-menu">
-          <li><a href="../elhadiyahia.net/our-laboratory/index.html">Our Laboratory</a></li>
-          <li><a href="../elhadiyahia.net/foods/index.html">Foods</a></li>
-          <li><a href="../elhadiyahia.net/queretaro/index.html">Querétaro</a></li>
-          <li><a href="../elhadiyahia.net/mexico/index.html">Mexico</a></li>
-          <li><a href="../elhadiyahia.net/people/index.html">People</a></li>
-        </ul>
-      </li>
-      <li class="has-sub">
-        <a href="#">Links</a>
-        <ul class="sub-menu">
-          <li><a href="../elhadiyahia.net/web-sites/index.html">Web Sites</a></li>
-          <li><a href="../elhadiyahia.net/videos/index.html">Videos</a></li>
-          <li><a href="../elhadiyahia.net/books-of-interest/index.html">Books of Interest</a></li>
-          <li><a href="../elhadiyahia.net/journals-of-interest/index.html">Journals of Interest</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="views.html">Views</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="links.html">Links</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
 
-    <div class="nav-hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <div class="nav-hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-<!-- Mobile nav -->
-<div id="mobile-nav">
+<nav id="mobile-nav">
   <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="#">Publications</a>
-  <div class="mobile-sub">
-    <a href="../elhadiyahia.net/books.1.html">Books</a>
-    <a href="../elhadiyahia.net/book-chapters.1.html">Book Chapters</a>
-    <a href="../elhadiyahia.net/refereed-articles.1.html">Refereed Articles</a>
-    <a href="../elhadiyahia.net/technical-articles.1.html">Technical Articles</a>
-    <a href="../elhadiyahia.net/abstracs.1.html">Abstracts</a>
-  </div>
-  <a href="../elhadiyahia.net/news/index.html">News</a>
-  <a href="../elhadiyahia.net/views/index.html">Views</a>
-  <a href="#">Gallery</a>
-  <div class="mobile-sub">
-    <a href="../elhadiyahia.net/our-laboratory/index.html">Our Laboratory</a>
-    <a href="../elhadiyahia.net/foods/index.html">Foods</a>
-    <a href="../elhadiyahia.net/queretaro/index.html">Querétaro</a>
-    <a href="../elhadiyahia.net/people/index.html">People</a>
-  </div>
-  <a href="about.html#contact">Contact</a>
-</div>
+  <a href="about.html">About</a>
+  <a href="publications.html">Publications</a>
+  <a href="news.html">News</a>
+  <a href="views.html">Views</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="links.html">Links</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<!-- ============================================================ -->
-<!-- HERO                                                         -->
-<!-- ============================================================ -->
+
+<!-- ================================================
+     HERO
+     ================================================ -->
 <section id="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="container">
-    <div class="hero-grid">
-      <!-- Left: text -->
-      <div class="hero-content">
-        <div class="hero-badge">
-          <i class="fas fa-flask"></i>
-          Phytochemicals &amp; Nutrition Laboratory · UAQ
-        </div>
-        <h1 class="hero-title">
-          Research &amp; Development<br/>
-          on <span>Food, Nutrition</span><br/>
-          &amp; Health
-        </h1>
-        <p class="hero-desc">
-          Dr. Elhadi M. Yahia leads pioneering research on phytochemicals in fruits
-          and vegetables — their identification, bioavailability, biological functions,
-          and nutritional importance. Over 30 years shaping global food science.
-        </p>
-        <div class="hero-actions">
-          <a href="../elhadiyahia.net/refereed-articles.1.html" class="btn btn-primary">
-            <i class="fas fa-book-open"></i> Our Publications
-          </a>
-          <a href="about.html#contact" class="btn btn-outline">
-            <i class="fas fa-envelope"></i> Get in Touch
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="num">30+</span>
-            <span class="lbl">Years of Research</span>
-          </div>
-          <div class="hero-stat">
-            <span class="num">40+</span>
-            <span class="lbl">Collaborators</span>
-          </div>
-          <div class="hero-stat">
-            <span class="num">500+</span>
-            <span class="lbl">Publications</span>
-          </div>
-        </div>
+  <div class="hero-bubbles"></div>
+  <div class="container hero-inner">
+
+    <!-- Left: text -->
+    <div class="hero-text">
+      <span class="hero-welcome">
+        <i class="fa-solid fa-leaf"></i> Food Science &amp; Postharvest Technology
+      </span>
+
+      <h1 class="hero-title">
+        Keeping Food <span class="hl">Fresh</span>,<br />
+        Nutritious &amp; Safe<br />
+        <span class="hl-b">for Everyone</span>
+      </h1>
+
+      <p class="hero-desc">
+        From the farm to your table — we study how to keep fruits and vegetables
+        at their best. Our work reduces food waste and helps people around the
+        world enjoy fresher, healthier food every day.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#focus" class="btn btn-blue">
+          <i class="fa-solid fa-seedling"></i> What We Study
+        </a>
+        <a href="about.html" class="btn btn-outline">
+          Meet the Team
+        </a>
       </div>
 
-      <!-- Right: images -->
-      <div class="hero-visual">
-        <img class="hero-img-main"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/Picture121.png"
-             alt="Phytochemicals research – fruits and vegetables" />
-        <div class="hero-img-row">
-          <img src="../elhadiyahia.net/wp-content/uploads/2022/02/elhadiyahia-Postharvest-Physiology-and-Biochemistry-of-Fruits-and-Vegetables.jpg"
-               alt="Postharvest Physiology and Biochemistry" />
-          <img src="../elhadiyahia.net/wp-content/uploads/2022/07/The_3_Fruits_2_by_hunter_mb-300x273.jpg"
-               alt="Fruits research" />
-        </div>
+    </div>
+
+    <!-- Right: image mosaic tall + 2 -->
+    <div class="hero-mosaic">
+      <div class="mosaic-img tall">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Bodegon_de_frutas_1_by_RonnyGye.jpg" alt="Fresh fruits" />
+      </div>
+      <div class="mosaic-img">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Mango_Tango_by_Subsolar.jpg" alt="Mangoes" />
+      </div>
+      <div class="mosaic-img">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Fruit_in_Basket_with_Cloth_by_LonePhantom.jpg" alt="Fruits in basket" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================
+     STATS STRIP
+     ================================================ -->
+<section id="strip">
+  <div class="container">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <span class="strip-num">40+</span>
+        <span class="strip-lbl">Years of Experience</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-num">60+</span>
+        <span class="strip-lbl">Collaborators Worldwide</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-num">700+</span>
+        <span class="strip-lbl">Publications</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-num">40+</span>
+        <span class="strip-lbl">Countries Reached</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ABOUT (brief)                                                -->
-<!-- ============================================================ -->
-<section id="about" class="section-pad">
-  <div class="container">
-    <div class="about-grid">
-      <!-- Images -->
-      <div class="about-imgs">
-        <img class="about-img-main"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/Picture121.png"
-             alt="Dr. Elhadi Yahia" />
-        <img class="about-img-secondary"
-             src="../elhadiyahia.net/wp-content/uploads/2020/12/vegetables-800-750x750.jpg"
-             alt="Vegetables research" />
-        <div class="about-badge">
-          <strong>30+</strong>
-          <span>Years Experience</span>
+
+<!-- ================================================
+     WELCOME / ABOUT
+     ================================================ -->
+<section id="welcome" class="section-pad">
+  <div class="container welcome-grid">
+
+    <div class="welcome-img-wrap">
+      <img class="welcome-img"
+           src="../elhadiyahia.net/wp-content/uploads/2022/02/Picture121.png"
+           onerror="this.src='../elhadiyahia.net/wp-content/uploads/2022/07/imagen47.jpg'; this.onerror=null;"
+           alt="Fresh fruits" />
+      <div class="welcome-img-badge">
+        <div style="font-family:var(--font-head); font-weight:900; font-size:1.6rem; line-height:1;">40+</div>
+        <div style="font-size:.7rem; font-weight:600; opacity:.9; margin-top:2px;">Years<br/>of Passion</div>
+      </div>
+    </div>
+
+    <div>
+      <span class="eyebrow">About Us</span>
+      <h2 class="section-title">Passionate About <span style="color:var(--green)">Food</span>, Committed to People</h2>
+      <p class="section-sub" style="margin-bottom:20px;">
+        Dr. Elhadi Yahia has dedicated his life to understanding how to keep food fresh, nutritious,
+        and available — especially for communities that need it most.
+        His work spans tropical fruits, vegetables, and postharvest technologies applied in more than
+        40 countries across the world.
+      </p>
+      <p class="section-sub" style="margin-bottom:32px;">
+        Based at the <strong>Universidad Autónoma de Querétaro</strong> in Mexico, our team works
+        hand-in-hand with farmers, governments, and international organizations like the
+        <strong>FAO</strong> to make food systems smarter, safer, and more sustainable.
+      </p>
+
+      <div style="display:flex; gap:32px; flex-wrap:wrap; margin-bottom:36px;">
+        <div>
+          <div style="font-family:var(--font-head); font-size:1.5rem; font-weight:700; color:var(--green);">25+</div>
+          <div style="font-size:.82rem; color:var(--muted); font-weight:500;">Books Authored</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-head); font-size:1.5rem; font-weight:700; color:var(--blue);">180+</div>
+          <div style="font-size:.82rem; color:var(--muted); font-weight:500;">Book Chapters</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-head); font-size:1.5rem; font-weight:700; color:var(--orange);">250+</div>
+          <div style="font-size:.82rem; color:var(--muted); font-weight:500;">Scientific Articles</div>
         </div>
       </div>
 
-      <!-- Text -->
-      <div class="about-content">
-        <span class="label">About Dr. Yahia</span>
-        <h2 class="section-title">
-          Elhadi M. Yahia, Ph.D.
-        </h2>
-        <div class="about-divider"></div>
-        <p style="color: var(--c-muted); line-height: 1.75; margin-bottom: 16px;">
-          <strong style="color: var(--c-dark);">Emeritus Professor &amp; Senior Scientist</strong> at the
-          Universidad Autónoma de Querétaro (UAQ), Mexico. Dr. Yahia holds a B.Sc.
-          from the University of Tripoli, an M.Sc. from UC Davis, and a Ph.D. from
-          Cornell University.
-        </p>
-        <p style="color: var(--c-muted); line-height: 1.75; margin-bottom: 24px;">
-          His research group focuses on the identification, characterization and
-          quantification of phytochemicals in fruits and vegetables, their
-          bioavailability and bioaccessibility, and their biological functions and
-          nutritional importance. He collaborates with research groups in Mexico and
-          across the globe.
-        </p>
-        <div class="about-tags">
-          <span class="about-tag"><i class="fas fa-seedling"></i> Phytochemicals</span>
-          <span class="about-tag"><i class="fas fa-apple-alt"></i> Postharvest</span>
-          <span class="about-tag"><i class="fas fa-heartbeat"></i> Nutrition &amp; Health</span>
-          <span class="about-tag"><i class="fas fa-dna"></i> Bioavailability</span>
-        </div>
-        <div class="about-list">
-          <div class="about-list-item">
-            <i class="fas fa-graduation-cap"></i>
-            <span>Ph.D. Cornell University · M.Sc. UC Davis · B.Sc. University of Tripoli</span>
-          </div>
-          <div class="about-list-item">
-            <i class="fas fa-university"></i>
-            <span>Emeritus Professor, Universidad Autónoma de Querétaro, Mexico</span>
-          </div>
-          <div class="about-list-item">
-            <i class="fas fa-globe-americas"></i>
-            <span>International collaborations with research groups in +20 countries</span>
-          </div>
-        </div>
-        <div style="margin-top: 32px; display: flex; gap: 14px;">
-          <a href="about.html" class="btn btn-outline-dark">
-            <i class="fas fa-user"></i> Full Profile
-          </a>
-          <a href="../elhadiyahia.net/refereed-articles.1.html" class="btn btn-primary">
-            <i class="fas fa-file-alt"></i> Publications
-          </a>
-        </div>
-      </div>
+      <a href="about.html" class="btn btn-green">
+        Learn More About Us <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
+
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- RESEARCH AREAS                                               -->
-<!-- ============================================================ -->
-<section id="research" class="section-pad">
+
+<!-- ================================================
+     WHAT WE STUDY
+     ================================================ -->
+<section id="focus" class="section-pad" style="background:var(--bg);">
   <div class="container">
-    <div class="text-center" style="position: relative; z-index: 1;">
-      <span class="label" style="color: var(--c-primary-l);">What We Study</span>
-      <h2 class="section-title" style="color: #fff;">Research Focus Areas</h2>
-      <p class="section-desc center">
-        Multidisciplinary research connecting plant science, food technology,
-        and human nutrition.
+    <div class="text-center" style="margin-bottom:52px;">
+      <span class="eyebrow">Our Work</span>
+      <h2 class="section-title">What We Study</h2>
+      <p class="section-sub c">
+        From the moment food is harvested to the moment it reaches your plate,
+        we work to make every step safer, smarter, and more nutritious.
       </p>
     </div>
-    <div class="research-grid" style="position: relative; z-index: 1;">
-      <div class="research-card">
-        <div class="research-icon"><i class="fas fa-leaf"></i></div>
-        <h3>Phytochemicals</h3>
-        <p>Identification, characterization, and quantification of bioactive compounds — polyphenols, carotenoids, vitamins — in fruits and vegetables.</p>
+
+    <div class="focus-grid">
+
+      <div class="focus-card blue">
+        <div class="focus-icon"><i class="fa-solid fa-apple-whole"></i></div>
+        <h3 class="focus-title">Postharvest Technology</h3>
+        <p class="focus-text">
+          How to keep fruits and vegetables alive and fresh after harvesting.
+          We develop techniques to slow down aging, control ripening, and
+          extend shelf life without losing flavor or nutrition.
+        </p>
+        <a href="publications.html" class="focus-link">Explore publications <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="research-card">
-        <div class="research-icon"><i class="fas fa-microscope"></i></div>
-        <h3>Bioavailability &amp; Bioaccessibility</h3>
-        <p>Understanding how phytochemicals are released from food matrices and absorbed by the human body to exert health effects.</p>
+
+      <div class="focus-card green">
+        <div class="focus-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3 class="focus-title">Food Quality &amp; Nutrition</h3>
+        <p class="focus-text">
+          We analyze how vitamins, antioxidants, and other nutrients change
+          during storage and processing. Our goal: food that reaches you
+          as nourishing as the day it was picked.
+        </p>
+        <a href="publications.html" class="focus-link">Explore publications <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="research-card">
-        <div class="research-icon"><i class="fas fa-apple-alt"></i></div>
-        <h3>Postharvest Physiology</h3>
-        <p>Studying the biochemical and physiological changes in fruits and vegetables after harvest to extend shelf life and preserve quality.</p>
+
+      <div class="focus-card orange">
+        <div class="focus-icon"><i class="fa-solid fa-temperature-low"></i></div>
+        <h3 class="focus-title">Cold Chain &amp; Storage</h3>
+        <p class="focus-text">
+          Temperature is everything in food preservation. We study how
+          refrigeration, modified atmospheres, and smart packaging
+          work together to keep food fresh longer.
+        </p>
+        <a href="publications.html" class="focus-link">Explore publications <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="research-card">
-        <div class="research-icon"><i class="fas fa-heartbeat"></i></div>
-        <h3>Nutrition &amp; Health</h3>
-        <p>Evaluating the nutritional composition and health-promoting properties of fresh and processed foods for human well-being.</p>
+
+      <div class="focus-card purple">
+        <div class="focus-icon"><i class="fa-solid fa-globe-americas"></i></div>
+        <h3 class="focus-title">Tropical Fruits</h3>
+        <p class="focus-text">
+          Mangoes, avocados, papayas, guavas — we are experts in tropical
+          fruits, helping producers in Mexico, Latin America, Africa, and
+          Asia get their products to market in perfect condition.
+        </p>
+        <a href="gallery.html" class="focus-link">See our gallery <i class="fa-solid fa-arrow-right"></i></a>
       </div>
+
+      <div class="focus-card teal">
+        <div class="focus-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 class="focus-title">Food Safety</h3>
+        <p class="focus-text">
+          We investigate how to prevent contamination and microbial growth
+          in fresh produce, making sure the food you eat is not only
+          delicious but also safe for everyone.
+        </p>
+        <a href="publications.html" class="focus-link">Explore publications <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="focus-card yellow">
+        <div class="focus-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+        <h3 class="focus-title">Reducing Food Waste</h3>
+        <p class="focus-text">
+          Roughly one-third of all food produced in the world is lost or wasted.
+          Our research directly tackles this crisis by helping food stay
+          fresh from farm to fork.
+        </p>
+        <a href="news.html" class="focus-link">Read our news <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- ACADEMIC PRODUCTIVITY                                        -->
-<!-- ============================================================ -->
-<section id="publications" class="section-pad">
+
+<!-- ================================================
+     PUBLICATIONS
+     ================================================ -->
+<section id="pubs" class="section-pad" style="background:var(--white);">
   <div class="container">
-    <span class="label">Academic Output</span>
-    <h2 class="section-title">Our Publications</h2>
-    <p class="section-desc">
-      Decades of research translated into books, peer-reviewed articles,
-      technical reports, and international conference presentations.
-    </p>
+    <div class="text-center" style="margin-bottom:52px;">
+      <span class="eyebrow">Knowledge Shared</span>
+      <h2 class="section-title">Our Publications</h2>
+      <p class="section-sub c">
+        Decades of research, openly shared. From textbooks used in universities
+        around the world to articles in top scientific journals.
+      </p>
+    </div>
+
     <div class="pub-grid">
-      <!-- Books -->
-      <a href="../elhadiyahia.net/books.1.html" class="pub-card">
-        <img class="pub-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/elhadiyahia-Postharvest-Physiology-and-Biochemistry-of-Fruits-and-Vegetables.jpg"
-             alt="Books" />
-        <div class="pub-card-body">
-          <div class="pub-card-icon"><i class="fas fa-book"></i></div>
-          <h3>Books</h3>
-          <p>Authored and edited scientific books on postharvest physiology, food science, and phytochemistry.</p>
-          <span class="pub-card-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <!-- Book Chapters -->
-      <a href="../elhadiyahia.net/book-chapters.1.html" class="pub-card">
-        <img class="pub-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/book-chapters-elhadi-yahia.jpg"
-             alt="Book Chapters" />
-        <div class="pub-card-body">
-          <div class="pub-card-icon"><i class="fas fa-book-open"></i></div>
-          <h3>Book Chapters</h3>
-          <p>Contributed chapters in leading food science and nutrition reference volumes worldwide.</p>
-          <span class="pub-card-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <!-- Refereed Articles -->
-      <a href="../elhadiyahia.net/refereed-articles.1.html" class="pub-card">
-        <img class="pub-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/Refereed-Articles-Elhadi-Yahia.jpg"
-             alt="Refereed Articles" />
-        <div class="pub-card-body">
-          <div class="pub-card-icon"><i class="fas fa-bookmark"></i></div>
-          <h3>Refereed Articles</h3>
-          <p>Peer-reviewed research articles published in high-impact international scientific journals.</p>
-          <span class="pub-card-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <!-- Technical Articles -->
-      <a href="../elhadiyahia.net/technical-articles.1.html" class="pub-card">
-        <img class="pub-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/Technical-Articles-Elhadi-Yahia.jpg"
-             alt="Technical Articles" />
-        <div class="pub-card-body">
-          <div class="pub-card-icon"><i class="far fa-file-pdf"></i></div>
-          <h3>Technical Articles</h3>
-          <p>Applied technical papers bridging laboratory research and real-world food industry practice.</p>
-          <span class="pub-card-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <!-- Abstracts -->
-      <a href="../elhadiyahia.net/abstracs.1.html" class="pub-card">
-        <img class="pub-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/abstracts-elhadi-yahia.jpg"
-             alt="Abstracts" />
-        <div class="pub-card-body">
-          <div class="pub-card-icon"><i class="fas fa-file-signature"></i></div>
-          <h3>Abstracts</h3>
-          <p>Conference presentations and abstracts submitted to leading international food science events.</p>
-          <span class="pub-card-link">Explore <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- NEWS                                                         -->
-<!-- ============================================================ -->
-<section id="news" class="section-pad">
-  <div class="container">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;">
-      <div>
-        <span class="label">Latest Updates</span>
-        <h2 class="section-title" style="margin-bottom: 0;">News &amp; Events</h2>
+      <div class="pub-card pub-c1">
+        <div class="pub-icon"><i class="fa-solid fa-book"></i></div>
+        <div class="pub-num">25+</div>
+        <div class="pub-label">Books</div>
+        <p class="pub-desc">Comprehensive textbooks used in universities across 5 continents, including the landmark <em>Postharvest Physiology and Biochemistry of Fruits &amp; Vegetables</em>.</p>
+        <a href="publications.html#books" class="pub-link">View Books <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <a href="../elhadiyahia.net/news/index.html" class="btn btn-outline-dark" style="white-space: nowrap;">
-        All News <i class="fas fa-arrow-right"></i>
+
+      <div class="pub-card pub-c2">
+        <div class="pub-icon"><i class="fa-solid fa-bookmark"></i></div>
+        <div class="pub-num">180+</div>
+        <div class="pub-label">Book Chapters</div>
+        <p class="pub-desc">In-depth contributions to specialized volumes on food science, postharvest biology, and tropical fruit handling.</p>
+        <a href="publications.html#chapters" class="pub-link">View Chapters <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="pub-card pub-c3">
+        <div class="pub-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <div class="pub-num">250+</div>
+        <div class="pub-label">Refereed Articles</div>
+        <p class="pub-desc">Peer-reviewed studies in leading international journals on food quality, safety, and postharvest technology.</p>
+        <a href="publications.html#articles" class="pub-link">View Articles <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="pub-card pub-c4">
+        <div class="pub-icon"><i class="fa-solid fa-flask"></i></div>
+        <div class="pub-num">120+</div>
+        <div class="pub-label">Technical Articles</div>
+        <p class="pub-desc">Practical guides and technical reports for farmers, producers, and food industry professionals worldwide.</p>
+        <a href="publications.html#technical" class="pub-link">View Technical <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="pub-card pub-c5">
+        <div class="pub-icon"><i class="fa-solid fa-align-left"></i></div>
+        <div class="pub-num">300+</div>
+        <div class="pub-label">Abstracts</div>
+        <p class="pub-desc">Conference presentations and research summaries from international events across more than 40 countries.</p>
+        <a href="publications.html#abstracts" class="pub-link">View Abstracts <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     NEWS
+     ================================================ -->
+<section id="news" class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:48px;">
+      <div>
+        <span class="eyebrow">Stay Informed</span>
+        <h2 class="section-title">Latest News</h2>
+      </div>
+      <a href="news.html" class="btn btn-green">
+        All News <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
+
     <div class="news-grid">
-      <a href="../elhadiyahia.net/news/index.html" class="news-card">
-        <img class="news-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/07/fao-doc-300x225.jpg"
-             alt="FAO Document" />
-        <div class="news-card-body">
-          <span class="news-cat">International</span>
-          <h3>Prof. Elhadi Visited the FAO/UN</h3>
-          <p>Dr. Yahia's engagement with FAO/UN initiatives on food security and postharvest management.</p>
-          <div class="news-card-footer">
-            <span><i class="far fa-calendar fa-sm"></i> 2022</span>
-            <span>Read more →</span>
-          </div>
+
+      <div class="news-card">
+        <div class="news-img">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/07/fao-doc.jpg"
+               style="width:100%;height:100%;object-fit:cover;"
+               alt="FAO collaboration" />
+          <span class="news-badge" style="background:var(--blue);">International</span>
         </div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa-regular fa-calendar"></i> 2024</div>
+          <h3 class="news-title">FAO Collaboration on Reducing Postharvest Losses in Developing Countries</h3>
+          <p class="news-excerpt">
+            Dr. Yahia joins the FAO panel to develop new strategies for reducing food loss
+            across sub-Saharan Africa and Southeast Asia.
+          </p>
+          <a href="news.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/02/elhadiyahia-Postharvest-Physiology-and-Biochemistry-of-Fruits-and-Vegetables.jpg"
+               style="width:100%;height:100%;object-fit:cover;object-position:top;"
+               alt="Book publication" />
+          <span class="news-badge" style="background:var(--green);">Publication</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa-regular fa-calendar"></i> 2023</div>
+          <h3 class="news-title">New Edition: "Postharvest Physiology and Biochemistry of Fruits &amp; Vegetables"</h3>
+          <p class="news-excerpt">
+            Updated and expanded edition of the landmark reference book, now used in
+            universities across five continents.
+          </p>
+          <a href="news.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/07/imagen47.jpg"
+               style="width:100%;height:100%;object-fit:cover;"
+               alt="International event" />
+          <span class="news-badge" style="background:var(--orange);">Event</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date"><i class="fa-regular fa-calendar"></i> 2023</div>
+          <h3 class="news-title">International Symposium on Postharvest Quality of Tropical Fruits</h3>
+          <p class="news-excerpt">
+            Dr. Yahia presented the latest findings on mango postharvest handling and
+            cold chain management before an international audience.
+          </p>
+          <a href="news.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     VIEWS
+     ================================================ -->
+<section id="views-preview" class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:48px;">
+      <div>
+        <span class="eyebrow">Perspectives</span>
+        <h2 class="section-title">Views &amp; Opinions</h2>
+      </div>
+      <a href="views.html" class="btn btn-green">
+        All Views <i class="fa-solid fa-arrow-right"></i>
       </a>
-      <a href="../elhadiyahia.net/summer-of-research/index.html" class="news-card">
-        <img class="news-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/07/imagen47-300x222.jpg"
-             alt="Summer of Research" />
-        <div class="news-card-body">
-          <span class="news-cat">Laboratory</span>
-          <h3>Summer of Research Program</h3>
-          <p>Annual summer research initiative bringing students to the Phytochemicals &amp; Nutrition Laboratory.</p>
-          <div class="news-card-footer">
-            <span><i class="far fa-calendar fa-sm"></i> Annual</span>
-            <span>Read more →</span>
-          </div>
+    </div>
+
+    <div class="views-grid">
+
+      <div class="view-card">
+        <div style="height:160px;overflow:hidden;">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/08/v1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='var(--blue-l)';this.remove();" />
         </div>
-      </a>
-      <a href="../elhadiyahia.net/elhadi-yahia-ad-scientific-index-2024/index.html" class="news-card">
-        <img class="news-card-img"
-             src="../elhadiyahia.net/wp-content/uploads/2022/02/Refereed-Articles-Elhadi-Yahia.jpg"
-             alt="AD Scientific Index" />
-        <div class="news-card-body">
-          <span class="news-cat">Recognition</span>
-          <h3>AD Scientific Index 2024</h3>
-          <p>Dr. Yahia recognized in the AD Scientific Index among the best scientists in Mexico in Plant Science &amp; Agronomy.</p>
-          <div class="news-card-footer">
-            <span><i class="far fa-calendar fa-sm"></i> 2024</span>
-            <span>Read more →</span>
-          </div>
+        <div class="view-card-top">
+          <span class="view-type opinion">Opinion</span>
+          <h3>Why Postharvest Losses Are a Global Food Security Crisis</h3>
+          <p>More than one billion tons of food is lost every year after harvest — a human rights issue affecting millions of people worldwide.</p>
         </div>
+        <div class="view-card-foot">
+          <span class="view-author"><i class="fa-solid fa-user fa-fw" style="color:var(--green);"></i> Dr. Elhadi Yahia</span>
+          <a href="views.html" class="view-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="view-card">
+        <div style="height:160px;overflow:hidden;">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/08/v3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='var(--green-l)';this.remove();" />
+        </div>
+        <div class="view-card-top">
+          <span class="view-type review">Commentary</span>
+          <h3>The Nutritional Value of Fresh Fruits: What Happens After Harvest?</h3>
+          <p>Vitamins, antioxidants, and phytochemicals change once a fruit is picked. Understanding this is key to delivering truly nutritious food.</p>
+        </div>
+        <div class="view-card-foot">
+          <span class="view-author"><i class="fa-solid fa-user fa-fw" style="color:var(--green);"></i> Dr. Elhadi Yahia</span>
+          <a href="views.html" class="view-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="view-card">
+        <div style="height:160px;overflow:hidden;">
+          <img src="../elhadiyahia.net/wp-content/uploads/2022/08/v5.jpg" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='var(--orange-l)';this.remove();" />
+        </div>
+        <div class="view-card-top">
+          <span class="view-type interview">Interview</span>
+          <h3>Tropical Fruits and Their Untapped Potential for Global Markets</h3>
+          <p>Mangoes, avocados, papayas — nutritious and in demand. Yet farmers often lose much of their crop due to poor postharvest handling.</p>
+        </div>
+        <div class="view-card-foot">
+          <span class="view-author"><i class="fa-solid fa-user fa-fw" style="color:var(--green);"></i> Dr. Elhadi Yahia</span>
+          <a href="views.html" class="view-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     GALLERY PREVIEW
+     ================================================ -->
+<section id="gallery-preview" class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="eyebrow">Our Gallery</span>
+      <h2 class="section-title">A Look at Our World</h2>
+      <p class="section-sub c">Fruits, vegetables, our laboratory, and the places we've been — all captured in photos.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-thumb wide">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Bodegon_de_frutas_1_by_RonnyGye.jpg" alt="Bodegon de frutas" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Mango_Tango_by_Subsolar.jpg" alt="Mangoes" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/WaTeRmELoN_by_CozyComfyCouch.jpg" alt="Watermelon" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Bananas_by_Crowofdoom.jpg" alt="Bananas" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/ORANGE_RULES_by_dejanrushdate.jpg" alt="Oranges" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/lemon_by_alsebka.jpg" alt="Lemons" />
+      </div>
+      <div class="gallery-thumb">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/07/Raspberry_by_stefanella.jpg" alt="Raspberries" />
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <a href="gallery.html" class="btn btn-green">
+        <i class="fa-solid fa-images"></i> View Full Gallery
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- PARTNERS                                                     -->
-<!-- ============================================================ -->
-<section id="partners" class="section-pad" style="padding: 56px 0;">
-  <div class="container text-center">
-    <span class="label">Collaborating Institutions</span>
-    <h2 class="section-title">Research Partners</h2>
-    <p class="section-desc center">
-      Working alongside leading universities, international organizations,
-      and research centers.
-    </p>
-    <div class="partners-grid">
-      <a href="https://www.uaq.mx/" target="_blank" class="partner-logo">
+
+<!-- ================================================
+     PARTNERS
+     ================================================ -->
+<section id="partners" class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="eyebrow">Institutions &amp; Partners</span>
+      <h2 class="section-title">Who We Work With</h2>
+      <p class="section-sub c">
+        We are proud to collaborate with leading universities, research centers,
+        and international organizations dedicated to food and nutrition.
+      </p>
+    </div>
+
+    <div class="partners-row">
+      <div class="partner-item">
         <img src="../elhadiyahia.net/wp-content/uploads/2022/02/Logo_de_la_UAQ.png"
              alt="Universidad Autónoma de Querétaro" />
-      </a>
-      <a href="https://www.uaq.mx/" target="_blank" class="partner-logo">
-        <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-facultada-naturales.png"
-             alt="Facultad de Ciencias Naturales UAQ" />
-      </a>
-      <a href="https://www.fao.org/" target="_blank" class="partner-logo">
+      </div>
+      <div class="partner-item">
         <img src="../elhadiyahia.net/wp-content/uploads/2022/02/Fao-logo.png"
              alt="FAO – Food and Agriculture Organization" />
-      </a>
+      </div>
+      <div class="partner-item">
+        <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-facultada-naturales.png"
+             alt="Facultad de Ciencias Naturales" />
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- CONTACT                                                      -->
-<!-- ============================================================ -->
-<section id="contact" class="section-pad">
+
+<!-- ================================================
+     CONTACT
+     ================================================ -->
+<section id="contact" class="section-pad contact-section">
   <div class="container">
     <div class="contact-grid">
-      <!-- Info -->
-      <div>
-        <span class="label" style="color: var(--c-primary-l);">Get in Touch</span>
-        <h2 class="section-title" style="color: #fff;">Leave Us a Message</h2>
-        <p class="section-desc" style="color: rgba(255,255,255,.65);">
-          Interested in collaboration, research inquiries, or media requests?
-          We'd love to hear from you.
+
+      <div class="contact-info">
+        <span class="eyebrow" style="color:rgba(255,255,255,.7);">Get in Touch</span>
+        <h2 class="section-title" style="color:#fff; margin-bottom:16px;">Let's Talk About Food</h2>
+        <p style="color:rgba(255,255,255,.78); font-size:1rem; line-height:1.75; margin-bottom:36px;">
+          Whether you're a student, a journalist, a farmer, or just curious about
+          how food works — we love hearing from people who care about food.
+          Reach out and let's start a conversation.
         </p>
-        <div class="contact-info">
-          <div class="contact-info-item">
-            <div class="icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <strong>Email</strong>
-              <span><a href="mailto:yahia@uaq.mx" style="color: var(--c-primary-l);">yahia@uaq.mx</a></span>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="icon"><i class="fas fa-university"></i></div>
-            <div>
-              <strong>Institution</strong>
-              <span>Universidad Autónoma de Querétaro, Mexico</span>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="icon"><i class="fas fa-clock"></i></div>
-            <div>
-              <strong>Office Hours</strong>
-              <span>Monday – Friday, 9:00 – 18:00</span>
-            </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Facultad de Ciencias Naturales, UAQ<br />Querétaro, México</div>
           </div>
         </div>
-        <div class="contact-social">
-          <a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="http://twitter.com/elhadiyahia2" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank" aria-label="ResearchGate">
-            <i class="fab fa-researchgate"></i>
-          </a>
-          <a href="https://scholar.google.com.mx/citations?user=BZgYhRAAAAAJ&hl=es" target="_blank" aria-label="Google Scholar">
-            <i class="fas fa-graduation-cap"></i>
-          </a>
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">eyahia@uaq.mx</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+          <div>
+            <div class="contact-label">Web</div>
+            <div class="contact-value">elhadiyahia.net</div>
+          </div>
         </div>
       </div>
 
-      <!-- Form -->
-      <div class="contact-form">
-        <h3>Send a Message</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">Full Name</label>
-            <input type="text" id="fname" placeholder="Your full name" />
+      <div class="contact-form-wrap">
+        <h3 style="font-family:var(--font-head); font-weight:800; font-size:1.3rem; color:var(--dark); margin-bottom:24px;">
+          Send a Message
+        </h3>
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input class="form-control" type="text" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input class="form-control" type="text" placeholder="Your last name" required />
+            </div>
           </div>
           <div class="form-group">
-            <label for="femail">Email Address</label>
-            <input type="email" id="femail" placeholder="your@email.com" />
+            <label class="form-label">Email Address</label>
+            <input class="form-control" type="email" placeholder="you@email.com" required />
           </div>
-        </div>
-        <div class="form-group">
-          <label for="fsubject">Subject</label>
-          <input type="text" id="fsubject" placeholder="Research collaboration, inquiry…" />
-        </div>
-        <div class="form-group">
-          <label for="fmessage">Message</label>
-          <textarea id="fmessage" placeholder="Write your message here…"></textarea>
-        </div>
-        <button class="form-submit" type="submit">
-          <i class="fas fa-paper-plane"></i> &nbsp;Send Message
-        </button>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <input class="form-control" type="text" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-green" style="width:100%; justify-content:center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- FOOTER                                                       -->
-<!-- ============================================================ -->
-<footer>
+
+<!-- ================================================
+     FOOTER
+     ================================================ -->
+<footer id="footer">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
+
       <div class="footer-brand">
-        <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png"
-             alt="Phytochemicals and Nutrition Laboratory" />
-        <p>
-          Research and development on food, nutrition and health at the
-          Universidad Autónoma de Querétaro, Mexico.
+        <div style="font-family:var(--font-head); font-weight:900; font-size:1.2rem; color:#fff; margin-bottom:12px; display:flex; align-items:center; gap:10px;">
+          <i class="fa-solid fa-seedling" style="color:#FFD700;"></i> Elhadi Yahia
+        </div>
+        <p class="footer-tagline">
+          Food science for a better world — keeping food fresh, nutritious,
+          and available for everyone, everywhere.
         </p>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="http://twitter.com/elhadiyahia2" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank"><i class="fab fa-researchgate"></i></a>
+        <div class="footer-socials">
+          <a href="#" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+          <a href="#" aria-label="Google Scholar"><i class="fa-brands fa-google"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
 
-      <!-- Publications -->
       <div class="footer-col">
-        <h4>Publications</h4>
-        <div class="footer-links">
-          <a href="../elhadiyahia.net/books.1.html">Books</a>
-          <a href="../elhadiyahia.net/book-chapters.1.html">Book Chapters</a>
-          <a href="../elhadiyahia.net/refereed-articles.1.html">Refereed Articles</a>
-          <a href="../elhadiyahia.net/technical-articles.1.html">Technical Articles</a>
-          <a href="../elhadiyahia.net/abstracs.1.html">Abstracts</a>
-        </div>
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="views.html">Views</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
       </div>
 
-      <!-- Quick Links -->
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <div class="footer-links">
-          <a href="about.html">About Us</a>
-          <a href="../elhadiyahia.net/news/index.html">News</a>
-          <a href="../elhadiyahia.net/gallery/index.html">Gallery</a>
-          <a href="../elhadiyahia.net/videos/index.html">Videos</a>
-          <a href="../elhadiyahia.net/books-of-interest/index.html">Books of Interest</a>
-          <a href="../elhadiyahia.net/journals-of-interest/index.html">Journals of Interest</a>
-        </div>
+        <h4 class="footer-heading">Publications</h4>
+        <ul class="footer-links">
+          <li><a href="publications.html#books">Books</a></li>
+          <li><a href="publications.html#chapters">Book Chapters</a></li>
+          <li><a href="publications.html#articles">Refereed Articles</a></li>
+          <li><a href="publications.html#technical">Technical Articles</a></li>
+          <li><a href="publications.html#abstracts">Abstracts</a></li>
+        </ul>
       </div>
 
-      <!-- Contact -->
       <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:yahia@uaq.mx" style="color: var(--c-footer-text);">yahia@uaq.mx</a>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-university"></i>
-          <span>Universidad Autónoma de Querétaro, Mexico</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-clock"></i>
-          <span>Mon – Fri &nbsp;9:00 – 18:00</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fas fa-globe"></i>
-          <a href="https://elhadiyahia.net" target="_blank" style="color: var(--c-footer-text);">elhadiyahia.net</a>
-        </div>
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot fa-fw" style="color:var(--blue);"></i> Querétaro, México</li>
+          <li><i class="fa-solid fa-envelope fa-fw" style="color:var(--blue);"></i> eyahia@uaq.mx</li>
+          <li><i class="fa-solid fa-globe fa-fw" style="color:var(--blue);"></i> elhadiyahia.net</li>
+        </ul>
       </div>
+
     </div>
 
     <div class="footer-bottom">
-      <span>© 2024 Elhadi Yahia – Phytochemicals &amp; Nutrition Laboratory, UAQ. All rights reserved.</span>
-      <span>Redesigned for academic excellence</span>
+      <span>&copy; 2024 Elhadi Yahia. All rights reserved.</span>
+      <span>Universidad Autónoma de Querétaro &middot; Faculty of Natural Sciences</span>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to top -->
-<button id="scroll-top" aria-label="Scroll to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
 
-<!-- ============================================================ -->
-<!-- SCRIPTS                                                      -->
-<!-- ============================================================ -->
+<!-- ================================================
+     JAVASCRIPT
+     ================================================ -->
 <script>
-  /* Navbar scroll effect */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-    document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 400);
-  });
-  navbar.classList.add('scrolled'); // always solid since hero is dark
-
-  /* Hamburger */
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-  hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
-  hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') mobileNav.classList.toggle('open'); });
-
-  /* Scroll to top */
-  document.getElementById('scroll-top').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('hamburger').addEventListener('click', function () {
+    document.getElementById('mobile-nav').classList.toggle('open');
   });
 
-  /* Animate numbers in hero stats on scroll */
-  const stats = document.querySelectorAll('.hero-stat .num');
-  const targets = [30, 40, 500];
-  let animated = false;
-  const animateNums = () => {
-    if (animated) return;
-    const rect = document.querySelector('.hero-stats').getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      animated = true;
-      stats.forEach((el, i) => {
-        const target = targets[i];
-        let current = 0;
-        const step = Math.ceil(target / 40);
-        const suffix = el.textContent.includes('+') ? '+' : '';
-        const timer = setInterval(() => {
-          current = Math.min(current + step, target);
-          el.textContent = current + suffix;
-          if (current >= target) clearInterval(timer);
-        }, 35);
-      });
-    }
-  };
-  window.addEventListener('scroll', animateNums);
-  animateNums();
+  function handleContact(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
+    btn.style.background = 'var(--green)';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 3000);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
+      const id = this.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('mobile-nav').classList.remove('open');
+      }
+    });
+  });
 </script>
+
 </body>
 </html>

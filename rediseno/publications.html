@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
@@ -6,27 +6,27 @@
   <title>Publications – Elhadi Yahia Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-v2.css" />
   <style>
-    .page-hero { background: linear-gradient(135deg, var(--c-primary) 0%, #0d3320 100%); padding: calc(var(--nav-h) + 56px) 0 64px; position: relative; overflow: hidden; }
-    .page-hero::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:60px; background:var(--c-bg); clip-path:ellipse(55% 100% at 50% 100%); }
+    .page-hero { background: linear-gradient(135deg, var(--green) 0%, #145c35 100%); padding: calc(var(--nav-h) + 56px) 0 64px; position: relative; overflow: hidden; }
+    .page-hero::after { content:''; position:absolute; bottom:-2px; left:0; right:0; height:60px; background:var(--bg); clip-path:ellipse(55% 100% at 50% 100%); }
     .page-hero-bg { position:absolute; inset:0; background-image: radial-gradient(circle at 80% 30%, rgba(82,183,136,.1) 0%, transparent 55%), radial-gradient(circle at 20% 70%, rgba(224,122,95,.06) 0%, transparent 50%); pointer-events:none; }
     .page-hero-inner { position:relative; z-index:1; text-align:center; }
     .page-hero h1 { font-family:var(--font-head); font-size:clamp(2rem,4vw,3rem); color:#fff; margin-bottom:12px; }
     .page-hero p { color:rgba(255,255,255,.7); font-size:1.05rem; max-width:560px; margin:0 auto; }
     .breadcrumb { display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:20px; font-size:.82rem; color:rgba(255,255,255,.55); }
-    .breadcrumb a { color:var(--c-primary-l); } .breadcrumb span { color:rgba(255,255,255,.35); }
+    .breadcrumb a { color:var(--green-l); } .breadcrumb span { color:rgba(255,255,255,.35); }
 
     /* Tab nav */
-    .tab-nav { background:#fff; border-bottom:2px solid var(--c-border); position:sticky; top:var(--nav-h); z-index:90; }
+    .tab-nav { background:#fff; border-bottom:2px solid var(--border); position:sticky; top:var(--nav-h); z-index:90; }
     .tab-nav-inner { display:flex; gap:0; overflow-x:auto; }
-    .tab-btn { display:flex; align-items:center; gap:8px; padding:16px 22px; font-size:.88rem; font-weight:600; color:var(--c-muted); cursor:pointer; border:none; background:none; border-bottom:3px solid transparent; margin-bottom:-2px; white-space:nowrap; transition:all .2s; }
-    .tab-btn:hover { color:var(--c-primary); }
-    .tab-btn.active { color:var(--c-primary); border-bottom-color:var(--c-primary); }
-    .tab-btn .count { background:var(--c-light); color:var(--c-primary); font-size:.72rem; font-weight:700; padding:2px 8px; border-radius:50px; }
-    .tab-btn.active .count { background:var(--c-primary); color:#fff; }
+    .tab-btn { display:flex; align-items:center; gap:8px; padding:16px 22px; font-size:.88rem; font-weight:600; color:var(--muted); cursor:pointer; border:none; background:none; border-bottom:3px solid transparent; margin-bottom:-2px; white-space:nowrap; transition:all .2s; }
+    .tab-btn:hover { color:var(--green); }
+    .tab-btn.active { color:var(--green); border-bottom-color:var(--green); }
+    .tab-btn .count { background:var(--green-l); color:var(--green); font-size:.72rem; font-weight:700; padding:2px 8px; border-radius:50px; }
+    .tab-btn.active .count { background:var(--green); color:#fff; }
 
     /* Tab content */
     .tab-panel { display:none; padding:56px 0; }
@@ -34,99 +34,102 @@
 
     /* Book cards */
     .books-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:28px; }
-    .book-card { background:#fff; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--c-border); box-shadow:var(--shadow-sm); transition:transform .2s, box-shadow .2s; }
+    .book-card { background:#fff; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); transition:transform .2s, box-shadow .2s; }
     .book-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
-    .book-cover { width:100%; height:220px; object-fit:cover; background:var(--c-light); display:flex; align-items:center; justify-content:center; }
+    .book-cover { width:100%; height:220px; object-fit:cover; background:var(--green-l); display:flex; align-items:center; justify-content:center; }
     .book-cover img { width:100%; height:220px; object-fit:cover; }
-    .book-cover-placeholder { width:100%; height:220px; background:linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-m) 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; gap:10px; }
+    .book-cover-placeholder { width:100%; height:220px; background:linear-gradient(135deg, var(--green) 0%, var(--green-m) 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; gap:10px; }
     .book-cover-placeholder i { font-size:2.5rem; opacity:.7; }
     .book-cover-placeholder span { font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; opacity:.6; }
     .book-body { padding:16px; }
-    .book-body h3 { font-family:var(--font-head); font-size:.95rem; color:var(--c-dark); margin-bottom:6px; line-height:1.35; }
-    .book-meta { font-size:.78rem; color:var(--c-muted); display:flex; flex-direction:column; gap:3px; }
+    .book-body h3 { font-family:var(--font-head); font-size:.95rem; color:var(--dark); margin-bottom:6px; line-height:1.35; }
+    .book-meta { font-size:.78rem; color:var(--muted); display:flex; flex-direction:column; gap:3px; }
     .book-meta span { display:flex; align-items:center; gap:5px; }
-    .book-tag { display:inline-block; margin-top:10px; font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:50px; background:var(--c-light); color:var(--c-primary); }
+    .book-tag { display:inline-block; margin-top:10px; font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:50px; background:var(--green-l); color:var(--green); }
 
     /* Article list */
     .article-controls { display:flex; align-items:center; gap:14px; margin-bottom:28px; flex-wrap:wrap; }
     .search-box { display:flex; align-items:center; gap:0; flex:1; min-width:220px; max-width:400px; }
-    .search-box input { flex:1; padding:10px 16px; border:1.5px solid var(--c-border); border-right:none; border-radius:var(--r-sm) 0 0 var(--r-sm); font-family:var(--font-body); font-size:.875rem; outline:none; }
-    .search-box input:focus { border-color:var(--c-primary-l); }
-    .search-box button { padding:10px 16px; background:var(--c-primary); color:#fff; border:none; border-radius:0 var(--r-sm) var(--r-sm) 0; cursor:pointer; }
+    .search-box input { flex:1; padding:10px 16px; border:1.5px solid var(--border); border-right:none; border-radius:var(--r-sm) 0 0 var(--r-sm); font-family:var(--font-body); font-size:.875rem; outline:none; }
+    .search-box input:focus { border-color:var(--green-l); }
+    .search-box button { padding:10px 16px; background:var(--green); color:#fff; border:none; border-radius:0 var(--r-sm) var(--r-sm) 0; cursor:pointer; }
     .filter-chips { display:flex; gap:8px; flex-wrap:wrap; }
-    .chip { padding:6px 14px; border-radius:50px; border:1.5px solid var(--c-border); font-size:.8rem; font-weight:600; color:var(--c-muted); cursor:pointer; transition:all .2s; background:#fff; }
-    .chip.active, .chip:hover { background:var(--c-primary); color:#fff; border-color:var(--c-primary); }
+    .chip { padding:6px 14px; border-radius:50px; border:1.5px solid var(--border); font-size:.8rem; font-weight:600; color:var(--muted); cursor:pointer; transition:all .2s; background:#fff; }
+    .chip.active, .chip:hover { background:var(--green); color:#fff; border-color:var(--green); }
 
     .article-list { display:flex; flex-direction:column; gap:0; }
-    .article-item { padding:20px 24px; border:1px solid var(--c-border); background:#fff; border-radius:var(--r-md); margin-bottom:12px; display:grid; grid-template-columns:1fr auto; gap:16px; align-items:start; transition:box-shadow .2s, border-color .2s; }
-    .article-item:hover { box-shadow:var(--shadow-sm); border-color:var(--c-primary-l); }
-    .article-num { font-size:.8rem; font-weight:700; color:var(--c-accent); margin-bottom:4px; }
-    .article-title { font-family:var(--font-head); font-size:1rem; color:var(--c-dark); margin-bottom:6px; line-height:1.4; }
-    .article-authors { font-size:.82rem; color:var(--c-muted); margin-bottom:4px; }
-    .article-journal { font-size:.82rem; color:var(--c-primary-m); font-weight:600; font-style:italic; }
+    .article-item { padding:20px 24px; border:1px solid var(--border); background:#fff; border-radius:var(--r-md); margin-bottom:12px; display:grid; grid-template-columns:1fr auto; gap:16px; align-items:start; transition:box-shadow .2s, border-color .2s; }
+    .article-item:hover { box-shadow:var(--shadow); border-color:var(--green-l); }
+    .article-num { font-size:.8rem; font-weight:700; color:var(--orange); margin-bottom:4px; }
+    .article-title { font-family:var(--font-head); font-size:1rem; color:var(--dark); margin-bottom:6px; line-height:1.4; }
+    .article-authors { font-size:.82rem; color:var(--muted); margin-bottom:4px; }
+    .article-journal { font-size:.82rem; color:var(--green-m); font-weight:600; font-style:italic; }
     .article-badges { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
     .badge { font-size:.7rem; font-weight:700; padding:2px 9px; border-radius:50px; }
-    .badge-year { background:#f3f4f6; color:var(--c-text); }
-    .badge-doi { background:rgba(224,122,95,.1); color:var(--c-accent-d); }
-    .badge-oa { background:rgba(45,106,79,.1); color:var(--c-primary); }
+    .badge-year { background:#f3f4f6; color:var(--text); }
+    .badge-doi { background:rgba(224,122,95,.1); color:var(--orange); }
+    .badge-oa { background:rgba(45,106,79,.1); color:var(--green); }
     .article-actions { display:flex; flex-direction:column; gap:6px; align-items:flex-end; }
-    .icon-btn { width:36px; height:36px; border-radius:8px; border:1.5px solid var(--c-border); background:#fff; display:flex; align-items:center; justify-content:center; color:var(--c-muted); cursor:pointer; transition:all .2s; font-size:.85rem; }
-    .icon-btn:hover { background:var(--c-primary); color:#fff; border-color:var(--c-primary); }
+    .icon-btn { width:36px; height:36px; border-radius:8px; border:1.5px solid var(--border); background:#fff; display:flex; align-items:center; justify-content:center; color:var(--muted); cursor:pointer; transition:all .2s; font-size:.85rem; }
+    .icon-btn:hover { background:var(--green); color:#fff; border-color:var(--green); }
 
     /* Stats bar */
-    .stats-bar { background:var(--c-primary); color:#fff; padding:28px 0; margin-bottom:0; }
+    .stats-bar { background:var(--green); color:#fff; padding:28px 0; margin-bottom:0; }
     .stats-bar-inner { display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap; text-align:center; }
     .stat-item .num { font-family:var(--font-head); font-size:2.2rem; font-weight:700; display:block; }
     .stat-item .lbl { font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; opacity:.65; }
 
     /* Pagination */
     .pagination { display:flex; align-items:center; justify-content:center; gap:6px; margin-top:32px; }
-    .page-btn { width:38px; height:38px; border-radius:8px; border:1.5px solid var(--c-border); background:#fff; display:flex; align-items:center; justify-content:center; font-size:.875rem; font-weight:600; color:var(--c-text); cursor:pointer; transition:all .2s; }
-    .page-btn.active, .page-btn:hover { background:var(--c-primary); color:#fff; border-color:var(--c-primary); }
+    .page-btn { width:38px; height:38px; border-radius:8px; border:1.5px solid var(--border); background:#fff; display:flex; align-items:center; justify-content:center; font-size:.875rem; font-weight:600; color:var(--text); cursor:pointer; transition:all .2s; }
+    .page-btn.active, .page-btn:hover { background:var(--green); color:#fff; border-color:var(--green); }
     .page-btn:disabled { opacity:.4; cursor:default; }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png" alt="Elhadi Yahia Lab" />
+      <img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png"
+           style="height:40px;width:auto;filter:brightness(10);"
+           onerror="this.src='../elhadiyahia.net/wp-content/uploads/2022/02/logo-negro.png'; this.style.filter='brightness(10)'; this.onerror=null;"
+           alt="Elhadi Yahia" />
     </a>
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li class="has-sub"><a href="publications.html" class="active">Publications</a>
+      <li><a href="about.html">About</a></li>
+      <li class="has-sub">
+        <a href="publications.html" class="active">Publications</a>
         <ul class="sub-menu">
-          <li><a href="publications.html#books">Books</a></li>
-          <li><a href="publications.html#chapters">Book Chapters</a></li>
-          <li><a href="publications.html#articles">Refereed Articles</a></li>
-          <li><a href="publications.html#technical">Technical Articles</a></li>
-          <li><a href="publications.html#abstracts">Abstracts</a></li>
+          <li><a href="publications.html#books"><i class="fa-solid fa-book fa-fw"></i> Books</a></li>
+          <li><a href="publications.html#chapters"><i class="fa-solid fa-bookmark fa-fw"></i> Book Chapters</a></li>
+          <li><a href="publications.html#articles"><i class="fa-solid fa-file-alt fa-fw"></i> Refereed Articles</a></li>
+          <li><a href="publications.html#technical"><i class="fa-solid fa-flask fa-fw"></i> Technical Articles</a></li>
+          <li><a href="publications.html#abstracts"><i class="fa-solid fa-align-left fa-fw"></i> Abstracts</a></li>
         </ul>
       </li>
       <li><a href="news.html">News</a></li>
       <li><a href="views.html">Views</a></li>
-      <li class="has-sub"><a href="gallery.html">Gallery</a>
-        <ul class="sub-menu">
-          <li><a href="gallery.html#lab">Our Laboratory</a></li>
-          <li><a href="gallery.html#foods">Foods</a></li>
-          <li><a href="gallery.html#queretaro">Querétaro</a></li>
-          <li><a href="gallery.html#mexico">Mexico</a></li>
-          <li><a href="gallery.html#people">People</a></li>
-        </ul>
-      </li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="links.html">Links</a></li>
-      <li><a href="about.html#contact" class="nav-cta">Contact</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
     </ul>
-    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
-<div id="mobile-nav">
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="publications.html">Publications</a>
-  <a href="news.html">News</a><a href="views.html">Views</a><a href="gallery.html">Gallery</a><a href="links.html">Links</a>
-</div>
+<nav id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="publications.html">Publications</a>
+  <a href="news.html">News</a>
+  <a href="views.html">Views</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="links.html">Links</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
 
 <!-- HERO -->
 <div class="page-hero">
@@ -164,9 +167,9 @@
 <div class="tab-panel active" id="tab-books">
   <div class="container">
     <div style="margin-bottom:32px;">
-      <span class="label">Books</span>
+      <span class="eyebrow">Books</span>
       <h2 class="section-title">Authored &amp; Edited Books</h2>
-      <p class="section-desc">Published in English, Spanish, and Arabic across leading scientific publishers.</p>
+      <p class="section-sub">Published in English, Spanish, and Arabic across leading scientific publishers.</p>
     </div>
     <div class="books-grid">
       <!-- Real cover -->
@@ -277,7 +280,7 @@
 <div class="tab-panel" id="tab-chapters">
   <div class="container">
     <div style="margin-bottom:28px;">
-      <span class="label">Book Chapters</span>
+      <span class="eyebrow">Book Chapters</span>
       <h2 class="section-title">Contributed Book Chapters</h2>
     </div>
     <div class="article-controls">
@@ -301,7 +304,7 @@
       <div class="article-item"><div><div class="article-num">Chapter 06</div><div class="article-title">Bioavailability of Polyphenols from Fruits and Vegetables</div><div class="article-authors">Yahia, E.M., Victoria Campos, C.I., Ornelas-Paz, J.J.</div><div class="article-journal">In: Polyphenols in Human Health and Disease, Academic Press</div><div class="article-badges"><span class="badge badge-year">2023</span><span class="badge badge-doi">DOI Available</span></div></div><div class="article-actions"><button class="icon-btn"><i class="fas fa-download"></i></button><button class="icon-btn"><i class="fas fa-quote-right"></i></button></div></div>
       <div class="article-item"><div><div class="article-num">Chapter 07</div><div class="article-title">Antioxidant Activity Measurement Methods in Fruits and Vegetables</div><div class="article-authors">Yahia, E.M., González-Aguilar, G.A.</div><div class="article-journal">In: Methods in Antioxidant Research, Nova Science</div><div class="article-badges"><span class="badge badge-year">2017</span></div></div><div class="article-actions"><button class="icon-btn"><i class="fas fa-download"></i></button><button class="icon-btn"><i class="fas fa-quote-right"></i></button></div></div>
     </div>
-    <div class="pagination"><button class="page-btn">‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><span style="padding:0 6px;color:var(--c-muted)">…</span><button class="page-btn">26</button><button class="page-btn">›</button></div>
+    <div class="pagination"><button class="page-btn">‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><span style="padding:0 6px;color:var(--muted)">…</span><button class="page-btn">26</button><button class="page-btn">›</button></div>
   </div>
 </div>
 
@@ -309,7 +312,7 @@
 <div class="tab-panel" id="tab-articles">
   <div class="container">
     <div style="margin-bottom:28px;">
-      <span class="label">Refereed Articles</span>
+      <span class="eyebrow">Refereed Articles</span>
       <h2 class="section-title">Peer-Reviewed Scientific Articles</h2>
     </div>
     <div class="article-controls">
@@ -335,7 +338,7 @@
       <div class="article-item"><div><div class="article-num">Article 007</div><div class="article-title">Antitumor and Immunogenic Properties of Phytochemicals from <em>Opuntia ficus-indica</em></div><div class="article-authors">Lujan Méndez, F., Yahia, E.M., Ornelas-Paz, J.J.</div><div class="article-journal">Cells · 11(4), 2022</div><div class="article-badges"><span class="badge badge-year">2022</span><span class="badge badge-oa">Open Access</span></div></div><div class="article-actions"><button class="icon-btn"><i class="fas fa-download"></i></button><button class="icon-btn"><i class="fas fa-quote-right"></i></button></div></div>
       <div class="article-item"><div><div class="article-num">Article 008</div><div class="article-title">Vitamin C Content and Stability in Tropical Fruits During Postharvest Storage</div><div class="article-authors">Yahia, E.M., Maldonado Celis, M.E.</div><div class="article-journal">Nutrients · 14(3), 2022</div><div class="article-badges"><span class="badge badge-year">2022</span><span class="badge badge-doi">DOI Available</span></div></div><div class="article-actions"><button class="icon-btn"><i class="fas fa-download"></i></button><button class="icon-btn"><i class="fas fa-quote-right"></i></button></div></div>
     </div>
-    <div class="pagination"><button class="page-btn">‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><span style="padding:0 6px;color:var(--c-muted)">…</span><button class="page-btn">32</button><button class="page-btn">›</button></div>
+    <div class="pagination"><button class="page-btn">‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><span style="padding:0 6px;color:var(--muted)">…</span><button class="page-btn">32</button><button class="page-btn">›</button></div>
   </div>
 </div>
 
@@ -343,7 +346,7 @@
 <div class="tab-panel" id="tab-technical">
   <div class="container">
     <div style="margin-bottom:28px;">
-      <span class="label">Technical Articles</span>
+      <span class="eyebrow">Technical Articles</span>
       <h2 class="section-title">Technical &amp; Dissemination Articles</h2>
     </div>
     <div class="article-controls">
@@ -365,7 +368,7 @@
 <div class="tab-panel" id="tab-abstracts">
   <div class="container">
     <div style="margin-bottom:28px;">
-      <span class="label">Abstracts</span>
+      <span class="eyebrow">Abstracts</span>
       <h2 class="section-title">Conference Presentations &amp; Abstracts</h2>
     </div>
     <div class="article-controls">
@@ -383,26 +386,60 @@
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
+<footer id="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><img src="../elhadiyahia.net/wp-content/uploads/2022/02/logo-phytochemicals-white.png" alt="Lab logo"/><p>Research and development on food, nutrition and health at the Universidad Autónoma de Querétaro, Mexico.</p><div class="footer-social"><a href="https://www.facebook.com/elhadi.yahiakazuz" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="http://twitter.com/elhadiyahia2" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://www.linkedin.com/in/elhadi-yahia-99a58a8a" target="_blank"><i class="fab fa-linkedin-in"></i></a><a href="https://www.researchgate.net/profile/Elhadi-Yahia" target="_blank"><i class="fab fa-researchgate"></i></a></div></div>
-      <div class="footer-col"><h4>Publications</h4><div class="footer-links"><a href="publications.html#books">Books</a><a href="publications.html#chapters">Book Chapters</a><a href="publications.html#articles">Refereed Articles</a><a href="publications.html#technical">Technical Articles</a><a href="publications.html#abstracts">Abstracts</a></div></div>
-      <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="news.html">News</a><a href="gallery.html">Gallery</a><a href="links.html">Links</a></div></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:yahia@uaq.mx" style="color:var(--c-footer-text)">yahia@uaq.mx</a></div><div class="footer-contact-item"><i class="fas fa-university"></i><span>Universidad Autónoma de Querétaro, Mexico</span></div></div>
+      <div class="footer-brand">
+        <div style="font-family:var(--font-head); font-weight:800; font-size:1.1rem; color:#fff; margin-bottom:12px; display:flex; align-items:center; gap:10px;">
+          <i class="fa-solid fa-seedling" style="color:#a8ffcd;"></i> Elhadi Yahia
+        </div>
+        <p class="footer-tagline">Food science for a better world — keeping food fresh, nutritious, and available for everyone, everywhere.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+          <a href="#" aria-label="Google Scholar"><i class="fa-brands fa-google"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="views.html">Views</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Publications</h4>
+        <ul class="footer-links">
+          <li><a href="publications.html#books">Books</a></li>
+          <li><a href="publications.html#chapters">Book Chapters</a></li>
+          <li><a href="publications.html#articles">Refereed Articles</a></li>
+          <li><a href="publications.html#technical">Technical Articles</a></li>
+          <li><a href="publications.html#abstracts">Abstracts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-links">
+          <li><i class="fa-solid fa-location-dot fa-fw" style="color:var(--green-m);"></i> Querétaro, México</li>
+          <li><i class="fa-solid fa-envelope fa-fw" style="color:var(--green-m);"></i> eyahia@uaq.mx</li>
+          <li><i class="fa-solid fa-globe fa-fw" style="color:var(--green-m);"></i> elhadiyahia.net</li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2024 Elhadi Yahia – Phytochemicals &amp; Nutrition Laboratory, UAQ.</span><span>Redesigned for academic excellence</span></div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Elhadi Yahia. All rights reserved.</span>
+      <span>Universidad Autónoma de Querétaro &middot; Faculty of Natural Sciences</span>
+    </div>
   </div>
 </footer>
-<button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 
 <script>
-  const navbar = document.getElementById('navbar');
-  navbar.classList.add('scrolled');
-  window.addEventListener('scroll', () => { document.getElementById('scroll-top').classList.toggle('visible', window.scrollY > 400); });
   document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobile-nav').classList.toggle('open'));
-  document.getElementById('scroll-top').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 
   // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -426,3 +463,5 @@
 </script>
 </body>
 </html>
+
+

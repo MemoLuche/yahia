@@ -1,0 +1,164 @@
+<!-- PÁGINA: gallery  ·  Pega ESTE archivo en la pestaña HTML.
+     El CSS va en styles.css (pestaña CSS) y el JS en script.js (pestaña JavaScript). -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span><span style="color:rgba(255,255,255,.8)">Gallery</span></div>
+    <h1>Gallery</h1>
+    <p>Photos from our laboratory, research activities, events, and the beautiful places where we work.</p>
+  </div>
+</div>
+
+<!-- Tab nav -->
+<div class="tab-nav">
+  <div class="container tab-nav-inner">
+    <button class="tab-btn active" data-tab="lab"><i class="fas fa-flask"></i> Our Laboratory</button>
+    <button class="tab-btn" data-tab="foods"><i class="fas fa-apple-alt"></i> Foods</button>
+    <button class="tab-btn" data-tab="queretaro"><i class="fas fa-city"></i> Querétaro</button>
+    <button class="tab-btn" data-tab="mexico"><i class="fas fa-map-marked-alt"></i> Mexico</button>
+    <button class="tab-btn" data-tab="people"><i class="fas fa-users"></i> People</button>
+  </div>
+</div>
+
+<!-- OUR LABORATORY -->
+<div class="tab-panel active" id="tab-lab">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Where Science Happens</span>
+      <h2>Phytochemicals &amp; Nutrition Laboratory</h2>
+      <p>Our laboratory at the Faculty of Natural Sciences, UAQ, is equipped for phytochemical analysis, bioavailability studies, and postharvest research.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" onclick="openLightbox('/wp-content/uploads/2022/02/Picture121.png')">
+        <img src="/wp-content/uploads/2022/02/Picture121.png" alt="Laboratory fruits" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Phytochemical research samples</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2022/02/elhadiyahia-Postharvest-Physiology-and-Biochemistry-of-Fruits-and-Vegetables.jpg')">
+        <img src="/wp-content/uploads/2022/02/elhadiyahia-Postharvest-Physiology-and-Biochemistry-of-Fruits-and-Vegetables.jpg" alt="Book" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Reference materials</span></div>
+      </div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-microscope"></i><span>HPLC Equipment</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-vials"></i><span>Sample preparation</span></div></div>
+      <div class="gallery-item wide"><div class="gallery-placeholder"><i class="fas fa-flask"></i><span>General lab view</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-thermometer-half"></i><span>Cold storage room</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-balance-scale"></i><span>Analytical balance</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-atom"></i><span>Spectrophotometer</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOODS -->
+<div class="tab-panel" id="tab-foods">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Our Research Subjects</span>
+      <h2>Foods &amp; Produce</h2>
+      <p>Fruits, vegetables, and other plant foods studied for their phytochemical content, nutritional value, and postharvest behavior.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" onclick="openLightbox('/wp-content/uploads/2020/12/vegetables-800-750x750.jpg')">
+        <img src="/wp-content/uploads/2020/12/vegetables-800-750x750.jpg" alt="Vegetables" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Vegetable diversity</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2022/07/The_3_Fruits_2_by_hunter_mb-768x699.jpg')">
+        <img src="/wp-content/uploads/2022/07/The_3_Fruits_2_by_hunter_mb-768x699.jpg" alt="Fruits" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Tropical fruits</span></div>
+      </div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-seedling"></i><span>Garambullo</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-apple-alt"></i><span>Mango varieties</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-leaf"></i><span>Avocado</span></div></div>
+      <div class="gallery-item wide" onclick="openLightbox('/wp-content/uploads/2022/02/Picture121.png')">
+        <img src="/wp-content/uploads/2022/02/Picture121.png" alt="Fruits array" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Research specimen array</span></div>
+      </div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-pepper-hot"></i><span>Chili peppers</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-carrot"></i><span>Root vegetables</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- QUERÉTARO -->
+<div class="tab-panel" id="tab-queretaro">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Our Home City</span>
+      <h2>Querétaro, Mexico</h2>
+      <p>Santiago de Querétaro, a UNESCO World Heritage Site and home to the Universidad Autónoma de Querétaro.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide tall"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#b8d4c8,#7ab39a)"><i class="fas fa-city"></i><span>Centro Histórico de Querétaro</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#c8d4b8,#9ab37a)"><i class="fas fa-university"></i><span>UAQ Campus</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#d4c8b8,#b39a7a)"><i class="fas fa-monument"></i><span>Aqueduct</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#b8c8d4,#7a9ab3)"><i class="fas fa-mountain"></i><span>Sierra Gorda</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#d4b8c8,#b37a9a)"><i class="fas fa-church"></i><span>Colonial architecture</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#c8d4b8,#8ab38a)"><i class="fas fa-tree"></i><span>Botanical garden</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MEXICO -->
+<div class="tab-panel" id="tab-mexico">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Research Across the Country</span>
+      <h2>Mexico</h2>
+      <p>Fieldwork and collaborations across Mexico's rich agricultural and natural landscapes.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" onclick="openLightbox('/wp-content/uploads/2022/02/map-world.png')">
+        <img src="/wp-content/uploads/2022/02/map-world.png" alt="Research network" loading="lazy" style="object-fit:contain;background:var(--green-l);padding:20px;"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">International research network</span></div>
+      </div>
+      <div class="gallery-item tall"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#d4c8a8,#b3a060)"><i class="fas fa-tractor"></i><span>Agricultural fields</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#a8d4c8,#60b39a)"><i class="fas fa-warehouse"></i><span>Packing house visit</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#c8a8d4,#9a60b3)"><i class="fas fa-leaf"></i><span>Field sampling</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#d4a8a8,#b36060)"><i class="fas fa-map-marker-alt"></i><span>Sinaloa visit</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder" style="background:linear-gradient(135deg,#a8c8d4,#607ab3)"><i class="fas fa-handshake"></i><span>CIAD collaboration</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PEOPLE -->
+<div class="tab-panel" id="tab-people">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">The People Behind the Research</span>
+      <h2>Lab Team &amp; Events</h2>
+      <p>Students, collaborators, and researchers who make the work possible.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2024/06/Dr.-Elhadi-Yahia.-Foto-150x150.jpg')">
+        <img src="/wp-content/uploads/2024/06/Dr.-Elhadi-Yahia.-Foto-150x150.jpg" alt="Dr. Yahia" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Dr. Elhadi M. Yahia</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2026/04/Dr-Francisco-Lujan-Mendez-150x150.png')">
+        <img src="/wp-content/uploads/2026/04/Dr-Francisco-Lujan-Mendez-150x150.png" alt="Dr. Lujan" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Dr. Francisco Lujan Méndez</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2026/04/Guillermo-Gordillo.jpg')">
+        <img src="/wp-content/uploads/2026/04/Guillermo-Gordillo.jpg" alt="Guillermo Gordillo" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Guillermo A. Gordillo Pizarro – IT &amp; Web</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-08-at-10.37.40-AM-150x150.jpeg')">
+        <img src="/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-08-at-10.37.40-AM-150x150.jpeg" alt="Antonio Rocha" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Antonio Rocha González</span></div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/wp-content/uploads/2022/07/imagen47-300x222.jpg')">
+        <img src="/wp-content/uploads/2022/07/imagen47-300x222.jpg" alt="Summer research" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">Summer of Research program</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('/wp-content/uploads/2022/07/fao-doc-300x225.jpg')">
+        <img src="/wp-content/uploads/2022/07/fao-doc-300x225.jpg" alt="FAO visit" loading="lazy"/>
+        <div class="gallery-item-overlay"><span class="gallery-caption">FAO/UN visit – Rome, 2022</span></div>
+      </div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-users"></i><span>Lab group photo 2024</span></div></div>
+      <div class="gallery-item"><div class="gallery-placeholder"><i class="fas fa-chalkboard-teacher"></i><span>Conference presentation</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <img id="lightbox-img" src="" alt="Gallery image" />
+</div>

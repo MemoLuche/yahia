@@ -1,0 +1,191 @@
+<!-- PÁGINA: news  ·  Pega ESTE archivo en la pestaña HTML.
+     El CSS va en styles.css (pestaña CSS) y el JS en script.js (pestaña JavaScript). -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a><span>/</span><span style="color:rgba(255,255,255,.8)">News</span></div>
+    <h1>News &amp; Updates</h1>
+    <p>Stay up to date with the latest research, events, awards, and activities from the laboratory.</p>
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--bg);">
+  <div class="container">
+    <!-- Featured -->
+    <div class="featured-news">
+      <div class="featured-news-img">
+        <img src="/wp-content/uploads/2022/07/fao-doc-300x225.jpg" alt="FAO Visit" />
+        <div class="overlay"></div>
+      </div>
+      <div class="featured-news-body">
+        <span class="news-tag"><i class="fas fa-star"></i> Featured</span>
+        <h2>Prof. Elhadi Visited the FAO/UN Headquarters in Rome</h2>
+        <p>Dr. Yahia participated in high-level discussions on global food security, postharvest losses, and the development of agroindustry strategies for developing countries as part of his role as collaborator with FAO.</p>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;font-size:.82rem;color:var(--muted);">
+          <span><i class="far fa-calendar"></i> July 2022</span>
+          <span><i class="fas fa-tag"></i> International</span>
+        </div>
+        <a href="/prof-elhadi-visited-the-faoun/" class="read-more">Read full story <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Filters + Layout -->
+    <div class="news-layout">
+      <div>
+        <div class="news-filters">
+          <label>Filter:</label>
+          <span class="filter-chip active" onclick="filterNews(this,'all')">All</span>
+          <span class="filter-chip" onclick="filterNews(this,'international')">International</span>
+          <span class="filter-chip" onclick="filterNews(this,'research')">Research</span>
+          <span class="filter-chip" onclick="filterNews(this,'awards')">Awards</span>
+          <span class="filter-chip" onclick="filterNews(this,'events')">Events &amp; Summer</span>
+        </div>
+
+        <div class="news-grid-main">
+
+          <a href="/elhadi-yahia-ad-scientific-index-2024/" class="news-item" data-cat="awards">
+            <img class="news-item-img" src="/wp-content/uploads/2022/02/Refereed-Articles-Elhadi-Yahia.jpg" alt="AD Scientific Index 2024" />
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(224,122,95,.1);color:var(--orange);font-size:.68rem;">Awards</span></div>
+              <h3>AD Scientific Index 2024 – Best Scientists in Mexico</h3>
+              <p>Dr. Yahia recognized among the top scientists in Plant Science &amp; Agronomy in Mexico by AD Scientific Index.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> October 2024</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </a>
+
+          <a href="/summer-of-research-2024/" class="news-item" data-cat="events">
+            <img class="news-item-img" src="/wp-content/uploads/2022/07/imagen47-300x222.jpg" alt="Summer of Research 2024" />
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(82,183,136,.1);color:var(--green);font-size:.68rem;">Events</span></div>
+              <h3>Summer of Research 2024 Program</h3>
+              <p>Annual summer program welcoming undergraduate students to conduct research at the Phytochemicals &amp; Nutrition Laboratory.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> June 2024</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </a>
+
+          <a href="/summer-of-research/" class="news-item" data-cat="events">
+            <div class="news-item-img-placeholder"><i class="fas fa-flask"></i></div>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(82,183,136,.1);color:var(--green);font-size:.68rem;">Events</span></div>
+              <h3>Summer of Research 2022 – New Cohort</h3>
+              <p>Students from UAQ, UASLP, and other institutions joined the lab for an intensive summer research experience.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> June 2022</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </a>
+
+          <div class="news-item" data-cat="research">
+            <div class="news-item-img-placeholder"><i class="fas fa-seedling"></i></div>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(45,106,79,.1);color:var(--green);font-size:.68rem;">Research</span></div>
+              <h3>New Study on Garambullo Phytochemicals Published in Food Chemistry</h3>
+              <p>Research on bioactive compounds and antioxidant activity in Garambullo fruits at different ripening stages published in high-impact journal.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> March 2024</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+          <div class="news-item" data-cat="international">
+            <img class="news-item-img" src="/wp-content/uploads/2022/02/map-world.png" alt="International Collaboration" style="object-fit:contain;background:var(--green-l);padding:24px;"/>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(224,122,95,.1);color:var(--orange);font-size:.68rem;">International</span></div>
+              <h3>New International Collaboration with University of Antioquia, Colombia</h3>
+              <p>The lab welcomes Dr. Maldonado Celis as international collaborator, expanding research on cancer chemoprevention with plant-derived compounds.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> January 2025</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+          <div class="news-item" data-cat="research">
+            <div class="news-item-img-placeholder"><i class="fas fa-microscope"></i></div>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(45,106,79,.1);color:var(--green);font-size:.68rem;">Research</span></div>
+              <h3>Stanford University Ranks Dr. Yahia in Top 2% of World Scientists</h3>
+              <p>For the third consecutive year, Dr. Elhadi Yahia has been listed among the top 2% of scientists worldwide in the annual Stanford University ranking.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> September 2023</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+          <div class="news-item" data-cat="international">
+            <img class="news-item-img" src="/wp-content/uploads/2022/07/fao-doc-300x225.jpg" alt="FAO" />
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(224,122,95,.1);color:var(--orange);font-size:.68rem;">International</span></div>
+              <h3>Dr. Yahia Serves as Consultant for the World Bank Food Security Initiative</h3>
+              <p>Invited as expert consultant to provide guidance on postharvest loss reduction strategies for smallholder farmers in Latin America.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> August 2023</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+          <div class="news-item" data-cat="events">
+            <div class="news-item-img-placeholder"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(82,183,136,.1);color:var(--green);font-size:.68rem;">Events</span></div>
+              <h3>Keynote at ISHS Postharvest Symposium – Valencia, Spain</h3>
+              <p>Dr. Yahia delivered an invited keynote lecture on phytochemical bioavailability at the XII International Symposium on Postharvest Quality.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> May 2023</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+          <div class="news-item" data-cat="awards">
+            <div class="news-item-img-placeholder"><i class="fas fa-award"></i></div>
+            <div class="news-item-body">
+              <div class="news-item-meta"><span class="news-tag" style="background:rgba(224,122,95,.1);color:var(--orange);font-size:.68rem;">Awards</span></div>
+              <h3>Best Plant Science &amp; Agronomy Scientists in Mexico – 2024</h3>
+              <p>Recognized in the annual ranking of the best scientists in Mexico in plant science, agronomy, and food sciences by AD Scientific Index.</p>
+              <div class="news-item-footer"><span class="news-date"><i class="far fa-calendar"></i> 2024</span><span style="color:var(--green);font-weight:600;">Read →</span></div>
+            </div>
+          </div>
+
+        </div><!-- /grid -->
+
+        <!-- Pagination -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:40px;">
+          <button style="padding:9px 18px;border:1.5px solid var(--border);border-radius:8px;background:#fff;font-weight:600;color:var(--muted);cursor:pointer;">‹ Previous</button>
+          <button style="padding:9px 18px;border:1.5px solid var(--green);border-radius:8px;background:var(--green);font-weight:600;color:#fff;cursor:pointer;">1</button>
+          <button style="padding:9px 18px;border:1.5px solid var(--border);border-radius:8px;background:#fff;font-weight:600;cursor:pointer;">2</button>
+          <button style="padding:9px 18px;border:1.5px solid var(--border);border-radius:8px;background:#fff;font-weight:600;cursor:pointer;">Next ›</button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-widget">
+          <h4>Categories</h4>
+          <div class="cat-list">
+            <div class="cat-item"><span><i class="fas fa-globe" style="color:var(--orange);margin-right:8px;"></i>International</span><span class="cat-count">12</span></div>
+            <div class="cat-item"><span><i class="fas fa-flask" style="color:var(--green);margin-right:8px;"></i>Research</span><span class="cat-count">18</span></div>
+            <div class="cat-item"><span><i class="fas fa-award" style="color:#f59e0b;margin-right:8px;"></i>Awards</span><span class="cat-count">7</span></div>
+            <div class="cat-item"><span><i class="fas fa-calendar" style="color:var(--green-m);margin-right:8px;"></i>Events</span><span class="cat-count">14</span></div>
+            <div class="cat-item"><span><i class="fas fa-newspaper" style="color:var(--muted);margin-right:8px;"></i>General</span><span class="cat-count">9</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h4>Recent Posts</h4>
+          <div class="sidebar-recent">
+            <div class="sidebar-item">
+              <img src="/wp-content/uploads/2022/02/Refereed-Articles-Elhadi-Yahia.jpg" alt="AD Index" />
+              <div><p>AD Scientific Index 2024 – Best Scientists in Mexico</p><span><i class="far fa-calendar"></i> Oct 2024</span></div>
+            </div>
+            <div class="sidebar-item">
+              <div class="sidebar-item-placeholder"><i class="fas fa-seedling"></i></div>
+              <div><p>New Study on Garambullo Phytochemicals</p><span><i class="far fa-calendar"></i> Mar 2024</span></div>
+            </div>
+            <div class="sidebar-item">
+              <img src="/wp-content/uploads/2022/07/imagen47-300x222.jpg" alt="Summer" />
+              <div><p>Summer of Research 2024</p><span><i class="far fa-calendar"></i> Jun 2024</span></div>
+            </div>
+            <div class="sidebar-item">
+              <div class="sidebar-item-placeholder"><i class="fas fa-trophy"></i></div>
+              <div><p>Top 2% World Scientists – Stanford 2023</p><span><i class="far fa-calendar"></i> Sep 2023</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--green);border-color:var(--green);">
+          <h4 style="color:#fff;border-bottom-color:var(--green-l);">Stay Updated</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:16px;">Subscribe to receive lab news and new publications directly in your inbox.</p>
+          <input type="email" placeholder="your@email.com" style="width:100%;padding:10px 14px;border-radius:8px;border:none;font-family:var(--font-body);font-size:.875rem;margin-bottom:10px;" />
+          <button style="width:100%;padding:10px;background:var(--orange);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
